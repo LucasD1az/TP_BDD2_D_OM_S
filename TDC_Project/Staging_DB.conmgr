@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Staging_DB"
+  DTS:DTSID="{19020882-DDB9-4519-B8B3-99D12C900694}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=LAPTOP-83ABEQLK\SQLEXPRESS;Initial Catalog=TDC_Staging_DB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{19020882-DDB9-4519-B8B3-99D12C900694}LAPTOP-83ABEQLK\SQLEXPRESS.TDC_Staging_DB;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

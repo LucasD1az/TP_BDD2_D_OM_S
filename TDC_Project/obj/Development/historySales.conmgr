@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="historySales"
+  DTS:DTSID="{BDAD1CA4-EE99-4A2C-8116-AB7A2FC413F0}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=server-tuia.database.windows.net;User ID=alumno;Initial Catalog=TDChistorySales1;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package-{BDAD1CA4-EE99-4A2C-8116-AB7A2FC413F0}server-tuia.database.windows.net.TDChistorySales1.alumno;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAt25rordQRUmYLuS563ATJwAAAAACAAAAAAAQZgAAAAEAACAAAAAAjXSy/q8fEr5yrwCXgqzcLKqU1a9A6ORKLAU9UJgRuQAAAAAOgAAAAAIAACAAAAAaBwVg8T65IXCUkr3lLPMwDbOFwNSlxIfFIhHwnYzzuoAAAADyP5Fpbkew0UGJ3g0O0uSoGEvGB0F6e173Qscyybg37qWyyEbb5CSOUJ6BlRoGg9JpPQcQifo4rPvPDxnqvjE82aor7wEo+ysVRsYpYSNfrO/jZvFMaD81YzmQTM5WkoJjp5nVYVrNTjgfAqbnSf3cY/2JfpNUZz33LmdJhWu+RkAAAACLClxdmDrYCn6upSI/k8SbiUos93KfOi7jMXMiZEMeSTQCSHj2QPwRwhO4vGreVyyNz7dJKpdflY304GniofKE</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

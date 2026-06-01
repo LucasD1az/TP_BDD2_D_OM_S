@@ -1,0 +1,100 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lucas\\OneDrive\\Documents\\Acad\u00E9micas\\Bases_de_Datos_2\\TP_BDD2_D_OM_S\\TDC_Project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1566AFD2-F2E2-13CE-8991-31D299C4E401}|TDC_Project.dtproj|C:\\Users\\lucas\\OneDrive\\Documents\\Acad\u00E9micas\\Bases_de_Datos_2\\TP_BDD2_D_OM_S\\TDC_Project\\SSIS_Pkg_5.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{1566AFD2-F2E2-13CE-8991-31D299C4E401}|TDC_Project.dtproj|solutionrelative:SSIS_Pkg_5.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1566AFD2-F2E2-13CE-8991-31D299C4E401}|TDC_Project.dtproj|C:\\Users\\lucas\\OneDrive\\Documents\\Acad\u00E9micas\\Bases_de_Datos_2\\TP_BDD2_D_OM_S\\TDC_Project\\SSIS_Pkg_4.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{1566AFD2-F2E2-13CE-8991-31D299C4E401}|TDC_Project.dtproj|solutionrelative:SSIS_Pkg_4.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1566AFD2-F2E2-13CE-8991-31D299C4E401}|TDC_Project.dtproj|C:\\Users\\lucas\\OneDrive\\Documents\\Acad\u00E9micas\\Bases_de_Datos_2\\TP_BDD2_D_OM_S\\TDC_Project\\SSIS_Pkg_2.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{1566AFD2-F2E2-13CE-8991-31D299C4E401}|TDC_Project.dtproj|solutionrelative:SSIS_Pkg_2.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1566AFD2-F2E2-13CE-8991-31D299C4E401}|TDC_Project.dtproj|C:\\Users\\lucas\\OneDrive\\Documents\\Acad\u00E9micas\\Bases_de_Datos_2\\TP_BDD2_D_OM_S\\TDC_Project\\SSIS_Pkg_1.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{1566AFD2-F2E2-13CE-8991-31D299C4E401}|TDC_Project.dtproj|solutionrelative:SSIS_Pkg_1.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1566AFD2-F2E2-13CE-8991-31D299C4E401}|TDC_Project.dtproj|C:\\Users\\lucas\\OneDrive\\Documents\\Acad\u00E9micas\\Bases_de_Datos_2\\TP_BDD2_D_OM_S\\TDC_Project\\SSIS_Pkg_3.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{1566AFD2-F2E2-13CE-8991-31D299C4E401}|TDC_Project.dtproj|solutionrelative:SSIS_Pkg_3.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SSIS_Pkg_5.dtsx [Design]",
+              "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\Documents\\Acad\u00E9micas\\Bases_de_Datos_2\\TP_BDD2_D_OM_S\\TDC_Project\\SSIS_Pkg_5.dtsx",
+              "RelativeDocumentMoniker": "SSIS_Pkg_5.dtsx",
+              "ToolTip": "C:\\Users\\lucas\\OneDrive\\Documents\\Acad\u00E9micas\\Bases_de_Datos_2\\TP_BDD2_D_OM_S\\TDC_Project\\SSIS_Pkg_5.dtsx [Design]",
+              "RelativeToolTip": "SSIS_Pkg_5.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2026-06-01T20:01:13.88Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SSIS_Pkg_4.dtsx [Design]",
+              "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\Documents\\Acad\u00E9micas\\Bases_de_Datos_2\\TP_BDD2_D_OM_S\\TDC_Project\\SSIS_Pkg_4.dtsx",
+              "RelativeDocumentMoniker": "SSIS_Pkg_4.dtsx",
+              "ToolTip": "C:\\Users\\lucas\\OneDrive\\Documents\\Acad\u00E9micas\\Bases_de_Datos_2\\TP_BDD2_D_OM_S\\TDC_Project\\SSIS_Pkg_4.dtsx [Design]",
+              "RelativeToolTip": "SSIS_Pkg_4.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2026-06-01T19:38:09.263Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SSIS_Pkg_3.dtsx [Design]",
+              "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\Documents\\Acad\u00E9micas\\Bases_de_Datos_2\\TP_BDD2_D_OM_S\\TDC_Project\\SSIS_Pkg_3.dtsx",
+              "RelativeDocumentMoniker": "SSIS_Pkg_3.dtsx",
+              "ToolTip": "C:\\Users\\lucas\\OneDrive\\Documents\\Acad\u00E9micas\\Bases_de_Datos_2\\TP_BDD2_D_OM_S\\TDC_Project\\SSIS_Pkg_3.dtsx [Design]",
+              "RelativeToolTip": "SSIS_Pkg_3.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2026-06-01T18:58:50.402Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SSIS_Pkg_2.dtsx [Design]",
+              "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\Documents\\Acad\u00E9micas\\Bases_de_Datos_2\\TP_BDD2_D_OM_S\\TDC_Project\\SSIS_Pkg_2.dtsx",
+              "RelativeDocumentMoniker": "SSIS_Pkg_2.dtsx",
+              "ToolTip": "C:\\Users\\lucas\\OneDrive\\Documents\\Acad\u00E9micas\\Bases_de_Datos_2\\TP_BDD2_D_OM_S\\TDC_Project\\SSIS_Pkg_2.dtsx [Design]",
+              "RelativeToolTip": "SSIS_Pkg_2.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2026-06-01T16:26:48.096Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SSIS_Pkg_1.dtsx [Design]",
+              "DocumentMoniker": "C:\\Users\\lucas\\OneDrive\\Documents\\Acad\u00E9micas\\Bases_de_Datos_2\\TP_BDD2_D_OM_S\\TDC_Project\\SSIS_Pkg_1.dtsx",
+              "RelativeDocumentMoniker": "SSIS_Pkg_1.dtsx",
+              "ToolTip": "C:\\Users\\lucas\\OneDrive\\Documents\\Acad\u00E9micas\\Bases_de_Datos_2\\TP_BDD2_D_OM_S\\TDC_Project\\SSIS_Pkg_1.dtsx [Design]",
+              "RelativeToolTip": "SSIS_Pkg_1.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2026-06-01T17:20:04.822Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1020 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/1/2026 1:26:47 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-83ABEQLK"
+  DTS:CreatorName="LAPTOP-83ABEQLK\lucas"
+  DTS:DTSID="{71A687A4-6231-4438-A36E-410ED48765D7}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="SSIS_Pkg_3"
+  DTS:PackageType="5"
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{7C6C3ED9-EF4B-4327-A2EA-0B55E5B65E7E}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[employee]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{2F2EAE8F-665A-4E62-B180-9825E83157D7}"
+      DTS:ObjectName="employee">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\lucas\OneDrive\Documents\Académicas\Bases_de_Datos_2\TP_BDD2_D_OM_S\data\Area_Recursos_Humanos\Employee64.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[holidays]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{D80E89EC-AB67-4BF9-AA19-DE1997A64834}"
+      DTS:ObjectName="holidays">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\lucas\OneDrive\Documents\Académicas\Bases_de_Datos_2\TP_BDD2_D_OM_S\data\Area_Recursos_Humanos\Holidays64.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Clean Table (Holidays)"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{6cfd6a2d-50f8-4813-9534-9346225a1405}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Clean Table (Holidays)"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{19020882-DDB9-4519-B8B3-99D12C900694}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE Holidays" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Clean Table (Products)"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{AB91E04C-65EE-4AB2-9CE3-B5570B14C8F8}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Clean Table (Products)"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{19020882-DDB9-4519-B8B3-99D12C900694}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE Products" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Ingest to Staging (Holidays)"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{fb469730-8831-42ab-a07e-9d549e2ab2a3}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Ingest to Staging (Holidays)"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Ingest to Staging (Holidays)\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Holidays$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Ingest to Staging (Holidays)\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[holidays]"
+                  connectionManagerRefId="Package.ConnectionManagers[holidays]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Ingest to Staging (Holidays)\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Holidays)\Excel Source.Outputs[Excel Source Output].Columns[DATE]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Ingest to Staging (Holidays)\Excel Source.Outputs[Excel Source Output].ExternalColumns[DATE]"
+                      lineageId="Package\Ingest to Staging (Holidays)\Excel Source.Outputs[Excel Source Output].Columns[DATE]"
+                      name="DATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Holidays)\Excel Source.Outputs[Excel Source Output].Columns[HOLIDAY]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Ingest to Staging (Holidays)\Excel Source.Outputs[Excel Source Output].ExternalColumns[HOLIDAY]"
+                      length="255"
+                      lineageId="Package\Ingest to Staging (Holidays)\Excel Source.Outputs[Excel Source Output].Columns[HOLIDAY]"
+                      name="HOLIDAY"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Ingest to Staging (Holidays)\Excel Source.Outputs[Excel Source Output].ExternalColumns[DATE]"
+                      dataType="date"
+                      name="DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Ingest to Staging (Holidays)\Excel Source.Outputs[Excel Source Output].ExternalColumns[HOLIDAY]"
+                      dataType="wstr"
+                      length="255"
+                      name="HOLIDAY" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Ingest to Staging (Holidays)\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Holidays)\Excel Source.Outputs[Excel Source Error Output].Columns[DATE]"
+                      dataType="date"
+                      lineageId="Package\Ingest to Staging (Holidays)\Excel Source.Outputs[Excel Source Error Output].Columns[DATE]"
+                      name="DATE" />
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Holidays)\Excel Source.Outputs[Excel Source Error Output].Columns[HOLIDAY]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Ingest to Staging (Holidays)\Excel Source.Outputs[Excel Source Error Output].Columns[HOLIDAY]"
+                      name="HOLIDAY" />
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Holidays)\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Ingest to Staging (Holidays)\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Holidays)\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Ingest to Staging (Holidays)\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Ingest to Staging (Holidays)\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Holidays]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Ingest to Staging (Holidays)\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{19020882-DDB9-4519-B8B3-99D12C900694}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Staging_DB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Ingest to Staging (Holidays)\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Ingest to Staging (Holidays)\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DATE]"
+                      cachedDataType="date"
+                      cachedName="DATE"
+                      externalMetadataColumnId="Package\Ingest to Staging (Holidays)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[date]"
+                      lineageId="Package\Ingest to Staging (Holidays)\Excel Source.Outputs[Excel Source Output].Columns[DATE]" />
+                    <inputColumn
+                      refId="Package\Ingest to Staging (Holidays)\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[HOLIDAY]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="HOLIDAY"
+                      externalMetadataColumnId="Package\Ingest to Staging (Holidays)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[holiday]"
+                      lineageId="Package\Ingest to Staging (Holidays)\Excel Source.Outputs[Excel Source Output].Columns[HOLIDAY]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Ingest to Staging (Holidays)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[date]"
+                      dataType="dbDate"
+                      name="date" />
+                    <externalMetadataColumn
+                      refId="Package\Ingest to Staging (Holidays)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[holiday]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="holiday" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Ingest to Staging (Holidays)\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Ingest to Staging (Holidays)\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Holidays)\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Ingest to Staging (Holidays)\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Holidays)\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Ingest to Staging (Holidays)\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Ingest to Staging (Holidays).Paths[Excel Source Output]"
+              endId="Package\Ingest to Staging (Holidays)\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Ingest to Staging (Holidays)\Excel Source.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Ingest to Staging (Products)"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{78E2091F-4C8F-42B2-835B-C12D41B861AF}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Ingest to Staging (Products)"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Ingest to Staging (Products)\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Employee$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Ingest to Staging (Products)\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[employee]"
+                  connectionManagerRefId="Package.ConnectionManagers[employee]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].Columns[EMPLOYEE_ID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].ExternalColumns[EMPLOYEE_ID]"
+                      lineageId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].Columns[EMPLOYEE_ID]"
+                      name="EMPLOYEE_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].Columns[FULL_NAME]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].ExternalColumns[FULL_NAME]"
+                      length="255"
+                      lineageId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].Columns[FULL_NAME]"
+                      name="FULL_NAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].Columns[CATEGORY]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].ExternalColumns[CATEGORY]"
+                      length="255"
+                      lineageId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].Columns[CATEGORY]"
+                      name="CATEGORY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].Columns[EMPLOYMENT_DATE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].ExternalColumns[EMPLOYMENT_DATE]"
+                      length="255"
+                      lineageId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].Columns[EMPLOYMENT_DATE]"
+                      name="EMPLOYMENT_DATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].Columns[BIRTH_DATE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].ExternalColumns[BIRTH_DATE]"
+                      length="255"
+                      lineageId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].Columns[BIRTH_DATE]"
+                      name="BIRTH_DATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].Columns[EDUCATION_LEVEL]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].ExternalColumns[EDUCATION_LEVEL]"
+                      length="255"
+                      lineageId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].Columns[EDUCATION_LEVEL]"
+                      name="EDUCATION_LEVEL"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].Columns[GENDER]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].ExternalColumns[GENDER]"
+                      length="255"
+                      lineageId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].Columns[GENDER]"
+                      name="GENDER"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].ExternalColumns[EMPLOYEE_ID]"
+                      dataType="r8"
+                      name="EMPLOYEE_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].ExternalColumns[FULL_NAME]"
+                      dataType="wstr"
+                      length="255"
+                      name="FULL_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].ExternalColumns[CATEGORY]"
+                      dataType="wstr"
+                      length="255"
+                      name="CATEGORY" />
+                    <externalMetadataColumn
+                      refId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].ExternalColumns[EMPLOYMENT_DATE]"
+                      dataType="wstr"
+                      length="255"
+                      name="EMPLOYMENT_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].ExternalColumns[BIRTH_DATE]"
+                      dataType="wstr"
+                      length="255"
+                      name="BIRTH_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].ExternalColumns[EDUCATION_LEVEL]"
+                      dataType="wstr"
+                      length="255"
+                      name="EDUCATION_LEVEL" />
+                    <externalMetadataColumn
+                      refId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].ExternalColumns[GENDER]"
+                      dataType="wstr"
+                      length="255"
+                      name="GENDER" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Error Output].Columns[EMPLOYEE_ID]"
+                      dataType="r8"
+                      lineageId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Error Output].Columns[EMPLOYEE_ID]"
+                      name="EMPLOYEE_ID" />
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Error Output].Columns[FULL_NAME]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Error Output].Columns[FULL_NAME]"
+                      name="FULL_NAME" />
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Error Output].Columns[CATEGORY]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Error Output].Columns[CATEGORY]"
+                      name="CATEGORY" />
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Error Output].Columns[EMPLOYMENT_DATE]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Error Output].Columns[EMPLOYMENT_DATE]"
+                      name="EMPLOYMENT_DATE" />
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Error Output].Columns[BIRTH_DATE]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Error Output].Columns[BIRTH_DATE]"
+                      name="BIRTH_DATE" />
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Error Output].Columns[EDUCATION_LEVEL]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Error Output].Columns[EDUCATION_LEVEL]"
+                      name="EDUCATION_LEVEL" />
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Error Output].Columns[GENDER]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Error Output].Columns[GENDER]"
+                      name="GENDER" />
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Ingest to Staging (Products)\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Employees]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Ingest to Staging (Products)\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{19020882-DDB9-4519-B8B3-99D12C900694}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Staging_DB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Ingest to Staging (Products)\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Ingest to Staging (Products)\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EMPLOYEE_ID]"
+                      cachedDataType="r8"
+                      cachedName="EMPLOYEE_ID"
+                      externalMetadataColumnId="Package\Ingest to Staging (Products)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[employee_id]"
+                      lineageId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].Columns[EMPLOYEE_ID]" />
+                    <inputColumn
+                      refId="Package\Ingest to Staging (Products)\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FULL_NAME]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="FULL_NAME"
+                      externalMetadataColumnId="Package\Ingest to Staging (Products)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[full_name]"
+                      lineageId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].Columns[FULL_NAME]" />
+                    <inputColumn
+                      refId="Package\Ingest to Staging (Products)\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[GENDER]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="GENDER"
+                      externalMetadataColumnId="Package\Ingest to Staging (Products)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[gender]"
+                      lineageId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].Columns[GENDER]" />
+                    <inputColumn
+                      refId="Package\Ingest to Staging (Products)\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CATEGORY]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CATEGORY"
+                      externalMetadataColumnId="Package\Ingest to Staging (Products)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[category]"
+                      lineageId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].Columns[CATEGORY]" />
+                    <inputColumn
+                      refId="Package\Ingest to Staging (Products)\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EMPLOYMENT_DATE]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="EMPLOYMENT_DATE"
+                      externalMetadataColumnId="Package\Ingest to Staging (Products)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[employment_date]"
+                      lineageId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].Columns[EMPLOYMENT_DATE]" />
+                    <inputColumn
+                      refId="Package\Ingest to Staging (Products)\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BIRTH_DATE]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="BIRTH_DATE"
+                      externalMetadataColumnId="Package\Ingest to Staging (Products)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[birth_date]"
+                      lineageId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].Columns[BIRTH_DATE]" />
+                    <inputColumn
+                      refId="Package\Ingest to Staging (Products)\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EDUCATION_LEVEL]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="EDUCATION_LEVEL"
+                      externalMetadataColumnId="Package\Ingest to Staging (Products)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[education_level]"
+                      lineageId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output].Columns[EDUCATION_LEVEL]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Ingest to Staging (Products)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[employee_id]"
+                      dataType="i4"
+                      name="employee_id" />
+                    <externalMetadataColumn
+                      refId="Package\Ingest to Staging (Products)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[full_name]"
+                      dataType="wstr"
+                      length="100"
+                      name="full_name" />
+                    <externalMetadataColumn
+                      refId="Package\Ingest to Staging (Products)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="gender" />
+                    <externalMetadataColumn
+                      refId="Package\Ingest to Staging (Products)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="category" />
+                    <externalMetadataColumn
+                      refId="Package\Ingest to Staging (Products)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[employment_date]"
+                      dataType="dbDate"
+                      name="employment_date" />
+                    <externalMetadataColumn
+                      refId="Package\Ingest to Staging (Products)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[birth_date]"
+                      dataType="dbDate"
+                      name="birth_date" />
+                    <externalMetadataColumn
+                      refId="Package\Ingest to Staging (Products)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[education_level]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="education_level" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Ingest to Staging (Products)\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Ingest to Staging (Products)\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Products)\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Ingest to Staging (Products)\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Products)\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Ingest to Staging (Products)\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Ingest to Staging (Products).Paths[Excel Source Output]"
+              endId="Package\Ingest to Staging (Products)\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Ingest to Staging (Products)\Excel Source.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{AEDFFE8F-9DAB-4ADD-8D9C-D2CE35901B1F}"
+      DTS:From="Package\Clean Table (Products)"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Ingest to Staging (Products)" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{EC15020D-5E23-46D6-B826-31B50261C3BB}"
+      DTS:From="Package\Clean Table (Holidays)"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Ingest to Staging (Holidays)" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="149,42"
+          Id="Package\Clean Table (Products)"
+          TopLeft="93.3333296246,73.6666672521167" />
+        <NodeLayout
+          Size="240,42"
+          Id="Package\Ingest to Staging (Products)"
+          TopLeft="300.499988277754,76.5666672314538" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="242.3333296246,96.1166672417853">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="58.166658653154,0"
+              Start="0,0"
+              End="50.666658653154,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="50.666658653154,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="149,42"
+          Id="Package\Clean Table (Holidays)"
+          TopLeft="91.6666630241607,180.266668099297" />
+        <NodeLayout
+          Size="238,42"
+          Id="Package\Ingest to Staging (Holidays)"
+          TopLeft="299.999988079071,180.866667293443" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="240.666663024161,201.56666769637">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="59.3333250549108,0"
+              Start="0,0"
+              End="51.8333250549108,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="51.8333250549108,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Ingest to Staging (Products)">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="195,42"
+          Id="Package\Ingest to Staging (Products)\OLE DB Destination"
+          TopLeft="222.499991158645,231.400001839002" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Ingest to Staging (Products)\Excel Source"
+          TopLeft="220.833324558205,120.46666762405" />
+        <EdgeLayout
+          Id="Package\Ingest to Staging (Products).Paths[Excel Source Output]"
+          TopLeft="298.833324558205,162.46666762405">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="21.1666666004393,68.9333342149525"
+              Start="0,0"
+              End="21.1666666004393,61.4333342149525">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.4666671074762" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.4666671074762"
+                    Point2="0,34.4666671074762"
+                    Point3="4,34.4666671074762" />
+                  <mssgle:LineSegment
+                    End="17.1666666004393,34.4666671074762" />
+                  <mssgle:CubicBezierSegment
+                    Point1="17.1666666004393,34.4666671074762"
+                    Point2="21.1666666004393,34.4666671074762"
+                    Point3="21.1666666004393,38.4666671074762" />
+                  <mssgle:LineSegment
+                    End="21.1666666004393,61.4333342149525" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Ingest to Staging (Products)\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Ingest to Staging (Products)\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Ingest to Staging (Holidays)">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="195,42"
+          Id="Package\Ingest to Staging (Holidays)\OLE DB Destination"
+          TopLeft="427.499991158645,119.400001839002" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Ingest to Staging (Holidays)\Excel Source"
+          TopLeft="220.833324558205,120.46666762405" />
+        <EdgeLayout
+          Id="Package\Ingest to Staging (Holidays).Paths[Excel Source Output]"
+          TopLeft="376.833324558205,140.933334731526">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="50.66666660044,0"
+              Start="0,0"
+              End="43.16666660044,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="43.16666660044,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Ingest to Staging (Holidays)\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Ingest to Staging (Holidays)\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
