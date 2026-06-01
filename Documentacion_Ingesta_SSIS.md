@@ -35,6 +35,7 @@ En la parte inferior del entorno de Visual Studio, en la pestaña **Administrado
     * **MySQL:** Crea una conexión **ODBC** utilizando los drivers previamente instalados.
     * **SQL Server (History Sales):** Crea una conexión **OLE DB**.
     * **Archivos (Excel, TXT, CSV):** Crea una **Nueva conexión de Excel** o **Nueva conexión de archivos planos** según corresponda al formato.
+* Respecto a la conexión de Excel, existe un error en los paquetes SSIS que requiere que se descargue un driver o que se guarde la planilla en una versión moderna (64 bit). Estos nuevos archivos están en la carpeta de Recursos Humanos del proyecto.
 
 ## 5. Diseño de los Paquetes SSIS (Nodos de Carga)
 
