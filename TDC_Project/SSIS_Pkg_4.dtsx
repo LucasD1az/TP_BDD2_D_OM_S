@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="SSIS_Pkg_4"
   DTS:PackageType="5"
-  DTS:VersionBuild="24"
-  DTS:VersionGUID="{53B8DB98-3460-46FB-B9B1-B09427E50DD1}">
+  DTS:VersionBuild="25"
+  DTS:VersionGUID="{E9FC032F-DD0C-4ADC-AA85-CBBE7109CCE6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -1236,31 +1236,31 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Ingest to Staging (Retail Customers)\XML Source"
-          TopLeft="165.833326743709,138.66666776869" />
-        <NodeLayout
           Size="195.2,41.6"
           Id="Package\Ingest to Staging (Retail Customers)\OLE DB Destination"
           TopLeft="595.833309657045,137.800001095136" />
         <NodeLayout
           Size="152.8,41.6"
           Id="Package\Ingest to Staging (Retail Customers)\Derived Column"
-          TopLeft="384.166645676726,142.999999005596" />
+          TopLeft="386.666645540132,134.333332399196" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Ingest to Staging (Retail Customers)\XML Source"
+          TopLeft="165.833326743709,138.66666776869" />
         <EdgeLayout
           Id="Package\Ingest to Staging (Retail Customers).Paths[Derived Column Output]"
-          TopLeft="536.966645676726,161.200000050366">
+          TopLeft="539.466645540132,156.866666747166">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="58.8666639803187,0"
+              EndConnector="56.3666641169129,0"
               Start="0,0"
-              End="51.3666639803187,0">
+              End="48.8666641169129,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="51.3666639803187,0" />
+                    End="48.8666641169129,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1271,18 +1271,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Ingest to Staging (Retail Customers).Paths[cliente]"
-          TopLeft="316.233326743709,161.633333387143">
+          TopLeft="316.233326743709,157.300000083943">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="67.9333189330174,0"
+              EndConnector="70.4333187964231,0"
               Start="0,0"
-              End="60.4333189330174,0">
+              End="62.9333187964231,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="60.4333189330174,0" />
+                    End="62.9333187964231,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1313,10 +1313,6 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Ingest to Staging (Wholesaler Customers)\XML Source"
-          TopLeft="213.333324856229,143.866667810016" />
-        <NodeLayout
           Size="195.2,41.6"
           Id="Package\Ingest to Staging (Wholesaler Customers)\OLE DB Destination"
           TopLeft="602.166647407745,142.733334513373" />
@@ -1324,6 +1320,10 @@
           Size="152.8,41.6"
           Id="Package\Ingest to Staging (Wholesaler Customers)\Derived Column"
           TopLeft="414.999993816018,143.999997854233" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Ingest to Staging (Wholesaler Customers)\XML Source"
+          TopLeft="213.333324856229,143.866667810016" />
         <EdgeLayout
           Id="Package\Ingest to Staging (Wholesaler Customers).Paths[Derived Column Output]"
           TopLeft="567.799993816018,164.166666183803">
