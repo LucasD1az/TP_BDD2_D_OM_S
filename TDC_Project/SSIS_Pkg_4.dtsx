@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="SSIS_Pkg_4"
   DTS:PackageType="5"
-  DTS:VersionBuild="19"
-  DTS:VersionGUID="{7F7F57E5-3702-4D2B-BA42-AC9B5FEB193C}">
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{53B8DB98-3460-46FB-B9B1-B09427E50DD1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -48,6 +48,79 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\Ingest to Staging (Retail Customers)\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Ingest to Staging (Retail Customers)\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Ingest to Staging (Retail Customers)\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Ingest to Staging (Retail Customers)\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Retail Customers)\Derived Column.Outputs[Derived Column Output].Columns[is_retail]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Ingest to Staging (Retail Customers)\Derived Column.Outputs[Derived Column Output].Columns[is_retail]"
+                      name="is_retail"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">1</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">1</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Ingest to Staging (Retail Customers)\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Ingest to Staging (Retail Customers)\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Retail Customers)\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Ingest to Staging (Retail Customers)\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Retail Customers)\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Ingest to Staging (Retail Customers)\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\Ingest to Staging (Retail Customers)\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
@@ -160,6 +233,12 @@
                       cachedName="BIRTH_DATE"
                       externalMetadataColumnId="Package\Ingest to Staging (Retail Customers)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[birth_date]"
                       lineageId="Package\Ingest to Staging (Retail Customers)\XML Source.Outputs[cliente].Columns[BIRTH_DATE]" />
+                    <inputColumn
+                      refId="Package\Ingest to Staging (Retail Customers)\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[is_retail]"
+                      cachedDataType="i4"
+                      cachedName="is_retail"
+                      externalMetadataColumnId="Package\Ingest to Staging (Retail Customers)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[is_retail]"
+                      lineageId="Package\Ingest to Staging (Retail Customers)\Derived Column.Outputs[Derived Column Output].Columns[is_retail]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -174,8 +253,7 @@
                       name="full_name" />
                     <externalMetadataColumn
                       refId="Package\Ingest to Staging (Retail Customers)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[birth_date]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="20"
                       name="birth_date" />
                     <externalMetadataColumn
@@ -193,6 +271,10 @@
                       dataType="wstr"
                       length="20"
                       name="zipcode" />
+                    <externalMetadataColumn
+                      refId="Package\Ingest to Staging (Retail Customers)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[is_retail]"
+                      dataType="bool"
+                      name="is_retail" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -493,9 +575,14 @@
           <paths>
             <path
               refId="Package\Ingest to Staging (Retail Customers).Paths[cliente]"
-              endId="Package\Ingest to Staging (Retail Customers)\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\Ingest to Staging (Retail Customers)\Derived Column.Inputs[Derived Column Input]"
               name="cliente"
               startId="Package\Ingest to Staging (Retail Customers)\XML Source.Outputs[cliente]" />
+            <path
+              refId="Package\Ingest to Staging (Retail Customers).Paths[Derived Column Output]"
+              endId="Package\Ingest to Staging (Retail Customers)\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Ingest to Staging (Retail Customers)\Derived Column.Outputs[Derived Column Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -514,6 +601,79 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\Ingest to Staging (Wholesaler Customers)\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Ingest to Staging (Wholesaler Customers)\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Ingest to Staging (Wholesaler Customers)\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Ingest to Staging (Wholesaler Customers)\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Wholesaler Customers)\Derived Column.Outputs[Derived Column Output].Columns[is_retail]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Ingest to Staging (Wholesaler Customers)\Derived Column.Outputs[Derived Column Output].Columns[is_retail]"
+                      name="is_retail"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">0</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Ingest to Staging (Wholesaler Customers)\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Ingest to Staging (Wholesaler Customers)\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Wholesaler Customers)\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Ingest to Staging (Wholesaler Customers)\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Ingest to Staging (Wholesaler Customers)\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Ingest to Staging (Wholesaler Customers)\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\Ingest to Staging (Wholesaler Customers)\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
@@ -626,6 +786,12 @@
                       cachedName="ZIPCODE"
                       externalMetadataColumnId="Package\Ingest to Staging (Wholesaler Customers)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[zipcode]"
                       lineageId="Package\Ingest to Staging (Wholesaler Customers)\XML Source.Outputs[cliente].Columns[ZIPCODE]" />
+                    <inputColumn
+                      refId="Package\Ingest to Staging (Wholesaler Customers)\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[is_retail]"
+                      cachedDataType="i4"
+                      cachedName="is_retail"
+                      externalMetadataColumnId="Package\Ingest to Staging (Wholesaler Customers)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[is_retail]"
+                      lineageId="Package\Ingest to Staging (Wholesaler Customers)\Derived Column.Outputs[Derived Column Output].Columns[is_retail]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -658,6 +824,10 @@
                       dataType="wstr"
                       length="20"
                       name="zipcode" />
+                    <externalMetadataColumn
+                      refId="Package\Ingest to Staging (Wholesaler Customers)\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[is_retail]"
+                      dataType="bool"
+                      name="is_retail" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -958,9 +1128,14 @@
           <paths>
             <path
               refId="Package\Ingest to Staging (Wholesaler Customers).Paths[cliente]"
-              endId="Package\Ingest to Staging (Wholesaler Customers)\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\Ingest to Staging (Wholesaler Customers)\Derived Column.Inputs[Derived Column Input]"
               name="cliente"
               startId="Package\Ingest to Staging (Wholesaler Customers)\XML Source.Outputs[cliente]" />
+            <path
+              refId="Package\Ingest to Staging (Wholesaler Customers).Paths[Derived Column Output]"
+              endId="Package\Ingest to Staging (Wholesaler Customers)\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Ingest to Staging (Wholesaler Customers)\Derived Column.Outputs[Derived Column Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -997,27 +1172,31 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="149,42"
+          Size="148.8,41.6"
           Id="Package\Clean Table"
           TopLeft="93.3333296246,73.6666672521167" />
         <NodeLayout
-          Size="288,42"
+          Size="245.6,41.6"
           Id="Package\Ingest to Staging (Retail Customers)"
-          TopLeft="300.499988277754,76.5666672314538" />
+          TopLeft="302.99998814116,77.4333338920938" />
+        <NodeLayout
+          Size="320,41.6"
+          Id="Package\Ingest to Staging (Wholesaler Customers)"
+          TopLeft="624.166641864513,75.4333330784903" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="242.3333296246,96.1166672417853">
+          TopLeft="242.1333296246,96.3500005721052">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="58.166658653154,0"
+              EndConnector="60.8666585165601,0"
               Start="0,0"
-              End="50.666658653154,0">
+              End="53.3666585165601,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="50.666658653154,0" />
+                    End="53.3666585165601,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1026,24 +1205,20 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="320,42"
-          Id="Package\Ingest to Staging (Wholesaler Customers)"
-          TopLeft="624.166641864513,75.4333330784903" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="588.499988277754,97.0000001549721">
+          TopLeft="548.59998814116,97.233333485292">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="35.6666535867587,0"
+              EndConnector="75.5666537233529,0"
               Start="0,0"
-              End="28.1666535867587,0">
+              End="68.0666537233529,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="28.1666535867587,0" />
+                    End="68.0666537233529,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1059,29 +1234,55 @@
     design-time-name="Package\Ingest to Staging (Retail Customers)">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="195,42"
+          Size="150.4,41.6"
+          Id="Package\Ingest to Staging (Retail Customers)\XML Source"
+          TopLeft="165.833326743709,138.66666776869" />
+        <NodeLayout
+          Size="195.2,41.6"
           Id="Package\Ingest to Staging (Retail Customers)\OLE DB Destination"
           TopLeft="595.833309657045,137.800001095136" />
         <NodeLayout
-          Size="150,42"
-          Id="Package\Ingest to Staging (Retail Customers)\XML Source"
-          TopLeft="165.833326743709,138.66666776869" />
+          Size="152.8,41.6"
+          Id="Package\Ingest to Staging (Retail Customers)\Derived Column"
+          TopLeft="384.166645676726,142.999999005596" />
         <EdgeLayout
-          Id="Package\Ingest to Staging (Retail Customers).Paths[cliente]"
-          TopLeft="315.833326743709,159.233334431913">
+          Id="Package\Ingest to Staging (Retail Customers).Paths[Derived Column Output]"
+          TopLeft="536.966645676726,161.200000050366">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="279.999982913336,0"
+              EndConnector="58.8666639803187,0"
               Start="0,0"
-              End="272.499982913336,0">
+              End="51.3666639803187,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="272.499982913336,0" />
+                    End="51.3666639803187,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Ingest to Staging (Retail Customers).Paths[cliente]"
+          TopLeft="316.233326743709,161.633333387143">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="67.9333189330174,0"
+              Start="0,0"
+              End="60.4333189330174,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="60.4333189330174,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1110,29 +1311,55 @@
     design-time-name="Package\Ingest to Staging (Wholesaler Customers)">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="195,42"
-          Id="Package\Ingest to Staging (Wholesaler Customers)\OLE DB Destination"
-          TopLeft="414.166650209163,144.733334483571" />
-        <NodeLayout
-          Size="150,42"
+          Size="150.4,41.6"
           Id="Package\Ingest to Staging (Wholesaler Customers)\XML Source"
           TopLeft="213.333324856229,143.866667810016" />
+        <NodeLayout
+          Size="195.2,41.6"
+          Id="Package\Ingest to Staging (Wholesaler Customers)\OLE DB Destination"
+          TopLeft="602.166647407745,142.733334513373" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Ingest to Staging (Wholesaler Customers)\Derived Column"
+          TopLeft="414.999993816018,143.999997854233" />
         <EdgeLayout
-          Id="Package\Ingest to Staging (Wholesaler Customers).Paths[cliente]"
-          TopLeft="363.333324856229,165.300001146794">
+          Id="Package\Ingest to Staging (Wholesaler Customers).Paths[Derived Column Output]"
+          TopLeft="567.799993816018,164.166666183803">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="50.833325352934,0"
+              EndConnector="34.3666535917264,0"
               Start="0,0"
-              End="43.333325352934,0">
+              End="26.8666535917264,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="43.333325352934,0" />
+                    End="26.8666535917264,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Ingest to Staging (Wholesaler Customers).Paths[cliente]"
+          TopLeft="363.733324856229,164.733332832124">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="51.2666689597892,0"
+              Start="0,0"
+              End="43.7666689597892,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="43.7666689597892,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

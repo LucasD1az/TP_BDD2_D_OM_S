@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="SSIS_Pkg_2"
   DTS:PackageType="5"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{845B807E-C305-4FA7-B480-F4F1EA40766D}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{B0015350-EB16-427E-955F-A33E8FE07A76}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,11 +25,11 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=server-tuia.database.windows.net;User ID=alumno;Initial Catalog=TDChistorySales1;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package-{BDAD1CA4-EE99-4A2C-8116-AB7A2FC413F0}server-tuia.database.windows.net.TDChistorySales1.alumno;">
+          DTS:ConnectionString="Data Source=server-tuia.database.windows.net;User ID=alumno;Initial Catalog=TDChistorySales3;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package-{BDAD1CA4-EE99-4A2C-8116-AB7A2FC413F0}server-tuia.database.windows.net.TDChistorySales1.alumno;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAt25rordQRUmYLuS563ATJwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABA6CSIuQKxkBLJjEIt/3cajrne3MP1GU83MT3goqTEFAAAAAAOgAAAAAIAACAAAACYdMWI8idC+wt6HIpWvXWiUENX7RvdmS9QD3OIwGvKnSAAAAAkFkFNSlv8gZ3eCweM5OoH7HYCnTSpDia7qJFvoKKNjUAAAACe5/NeWqfGQdL5ZUkS5hVMdNLeM+QkGT5+WPAHIrkg3zUcdbB+Ckxz+KO6IrwY0gddYl6CdsCADDrMj8CjKsaG</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAt25rordQRUmYLuS563ATJwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAx3obMfv87F2MTPeAHtQmkVHP5EaGFtZMq13cVGLlIRAAAAAAOgAAAAAIAACAAAACeqoUU54drayzwdlkKz14q/75ZhzIvz1L3jPl3u2oKKyAAAAACt5AmPNQf6PuGI/eZWuHhxzwRGn/kj2gBx5bPNQusxEAAAAA2mWX9GEymMUjxebStxiYVeO9K+15Q3FyLhBcAJIkypC9CtKKoXFEJwpLOHVzsnGF256bPIlWsNuYOuT6Pt6/t</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -513,11 +513,11 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="149,42"
+          Size="148.8,41.6"
           Id="Package\Clean Table"
           TopLeft="93.3333296246,73.6666672521167" />
         <NodeLayout
-          Size="265,42"
+          Size="264.8,41.6"
           Id="Package\Ingest to Staging (History Sales)"
           TopLeft="300.499988277754,76.5666672314538" />
         <EdgeLayout
@@ -549,7 +549,7 @@
     design-time-name="Package\Ingest to Staging (History Sales)">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="171,42"
           Id="Package\Ingest to Staging (History Sales)\OLE DB Source"
@@ -577,14 +577,16 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Ingest to Staging (History Sales)\OLE DB Source">
+    design-time-name="Package\Ingest to Staging (History Sales)\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -597,7 +599,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Ingest to Staging (History Sales)\OLE DB Destination">
+    design-time-name="Package\Ingest to Staging (History Sales)\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

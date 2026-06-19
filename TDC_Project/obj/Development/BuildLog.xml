@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>TDC_Project</Name>
-    <LastWriteTime>2026-06-01T20:05:55.0023567Z</LastWriteTime>
+    <LastWriteTime>2026-06-18T19:07:59.6712106Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>SSIS_Pkg_2.dtsx</Name>
-      <LastWriteTime>2026-06-01T19:38:22.5932565Z</LastWriteTime>
+      <LastWriteTime>2026-06-17T05:11:40.9055408Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -18,17 +18,22 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>SSIS_Pkg_3.dtsx</Name>
-      <LastWriteTime>2026-06-01T19:29:55.3732704Z</LastWriteTime>
+      <LastWriteTime>2026-06-17T05:35:29.2674702Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>SSIS_Pkg_4.dtsx</Name>
-      <LastWriteTime>2026-06-01T20:05:54.9842494Z</LastWriteTime>
+      <LastWriteTime>2026-06-18T19:08:42.5478987Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>SSIS_Pkg_5.dtsx</Name>
-      <LastWriteTime>2026-06-01T20:05:54.9713193Z</LastWriteTime>
+      <LastWriteTime>2026-06-01T20:10:04.5063843Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Master_Pkg.dtsx</Name>
+      <LastWriteTime>2026-06-19T06:38:37.3881691Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

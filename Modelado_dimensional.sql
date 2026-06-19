@@ -1,100 +1,140 @@
-CREATE TABLE `hBilling` (
-  `billing_id` integer PRIMARY KEY,
-  `date` date,
-  `date_t` datetime,
-  `region` varchar(7),
-  `branch_id` integer,
-  `customer_id` integer,
-  `customer_age` integer,
-  `customer_age_group_id` integer,
-  `employee_id` integer,
-  `employee_age` integer,
-  `employee_seniority` integer,
-  `subtotal` double(7,2),
-  `discount_percentage` integer,
-  `discount_amount` double(7,2),
-  `final_billing` double(7,2),
-  `volume_sold_liters` double(6,2)
-);
 
-CREATE TABLE `hBillingDetail` (
-  `billing_id` integer,
-  `product_id` integer,
-  `unit_price` double(7,2),
-  `quantity` integer,
-  PRIMARY KEY (`billing_id`, `product_id`)
-);
+Table "dDate" {
+  "date" DATE [not null]
+  "year" INT [not null]
+  "month" INT [not null]
+  "day" INT [not null]
+  "weekday" INT [not null]
+  "month_name" NVARCHAR(20) [not null]
+  "weekday_name" NVARCHAR(20) [not null]
+  "trimester" INT [not null]
+  "semester" INT [not null]
+  "holiday" BIT [not null, default: 0]
 
-CREATE TABLE `hStock` (
-  `product_id` integer,
-  `date` datetime,
-  `variation` integer,
-  PRIMARY KEY (`product_id`, `date`)
-);
+  Indexes {
+    date [pk, name: "PK_dDate"]
+  }
+}
 
-CREATE TABLE `dDate` (
-  `date` date PRIMARY KEY,
-  `year` integer,
-  `month` integer,
-  `day` integer,
-  `weekday` integer,
-  `month_name` varchar(255),
-  `weekday_name` varchar(255),
-  `trimester` integer,
-  `semester` integer,
-  `holiday` bit
-);
+Table "dCustomer" {
+  "customer_sk" "INT IDENTITY(1,1)" [not null]
+  "customer_id" INT [not null]
+  "first_name" NVARCHAR(100) [not null]
+  "last_name" NVARCHAR(100) [not null]
+  "birth_date" DATE
+  "city" NVARCHAR(100)
+  "state" NVARCHAR(100)
+  "zipcode" NVARCHAR(20)
+  "is_retail" BIT
 
-CREATE TABLE `dEmployee` (
-  `employee_id` integer PRIMARY KEY,
-  `first_name` varchar(255),
-  `last_name` varchar(255),
-  `gender` varchar(255),
-  `category` varchar(255),
-  `employment_date` date,
-  `birth_date` date,
-  `education_level` varchar(255)
-);
+  Indexes {
+    customer_sk [pk, name: "PK_dCustomer"]
+  }
+}
 
-CREATE TABLE `dCustomer` (
-  `customer_id` integer PRIMARY KEY,
-  `first_name` varchar(255),
-  `last_name` varchar(255),
-  `birth_date` date,
-  `city` varchar(255),
-  `state` varchar(255),
-  `zipcode` varchar(255)
-);
+Table "dEmployee" {
+  "employee_sk" "INT IDENTITY(1,1)" [not null]
+  "employee_id" INT [not null]
+  "first_name" NVARCHAR(100) [not null]
+  "last_name" NVARCHAR(100) [not null]
+  "gender" NVARCHAR(10)
+  "category" NVARCHAR(100)
+  "employment_date" DATE
+  "birth_date" DATE
+  "education_level" NVARCHAR(50)
 
-CREATE TABLE `dProducts` (
-  `product_id` integer PRIMARY KEY,
-  `detail` varchar(25),
-  `package` varchar(15),
-  `category` varchar(15),
-  `is_can` bit,
-  `is_diet` bit,
-  `volume_liters` double(3,2)
-);
+  Indexes {
+    employee_sk [pk, name: "PK_dEmployee"]
+  }
+}
 
-CREATE TABLE `dAgeGroup` (
-  `age_group_id` integer PRIMARY KEY,
-  `group` varchar(25),
-  `min_age` integer,
-  `max_age` integer
-);
+Table "dAgeGroup" {
+  "age_group_id" "INT IDENTITY(1,1)" [not null]
+  "group" NVARCHAR(25) [not null]
+  "min_age" INT [not null]
+  "max_age" INT [not null]
 
-ALTER TABLE `hBilling` ADD FOREIGN KEY (`customer_id`) REFERENCES `dCustomer` (`customer_id`);
+  Indexes {
+    age_group_id [pk, name: "PK_dAgeGroup"]
+  }
+}
 
-ALTER TABLE `hBilling` ADD FOREIGN KEY (`employee_id`) REFERENCES `dEmployee` (`employee_id`);
+Table "dProducts" {
+  "product_sk" "INT IDENTITY(1,1)" [not null]
+  "product_id" INT [not null]
+  "detail" VARCHAR(200) [not null]
+  "package" VARCHAR(100)
+  "category" VARCHAR(15)
+  "is_can" BIT [not null, default: 0]
+  "is_diet" BIT [not null, default: 0]
+  "volume_liters" DECIMAL(3,2)
 
-ALTER TABLE `hBilling` ADD FOREIGN KEY (`date`) REFERENCES `dDate` (`date`);
+  Indexes {
+    product_sk [pk, name: "PK_dProducts"]
+  }
+}
 
-ALTER TABLE `hBilling` ADD FOREIGN KEY (`customer_age_group_id`) REFERENCES `dAgeGroup` (`age_group_id`);
+Table "hBilling" {
+  "billing_sk" "INT IDENTITY(1,1)" [not null]
+  "billing_id" INT [not null]
+  "date" DATE [not null]
+  "date_t" DATETIME
+  "region" NVARCHAR(7)
+  "branch_id" INT
+  "customer_sk" INT
+  "customer_age" INT
+  "customer_age_group_id" INT
+  "employee_sk" INT
+  "employee_age" INT
+  "employee_seniority" INT
+  "employee_gender" VARCHAR(10)
+  "subtotal" DECIMAL(7,2)
+  "discount_percentage" INT
+  "discount_amount" DECIMAL(7,2)
+  "final_billing" DECIMAL(7,2)
+  "volume_sold_liters" DECIMAL(6,2)
 
-ALTER TABLE `hBillingDetail` ADD FOREIGN KEY (`product_id`) REFERENCES `dProducts` (`product_id`);
+  Indexes {
+    billing_sk [pk, name: "PK_hBilling"]
+  }
+}
 
-ALTER TABLE `hBillingDetail` ADD FOREIGN KEY (`billing_id`) REFERENCES `hBilling` (`billing_id`);
+Table "hBillingDetail" {
+  "detail_sk" "INT IDENTITY(1,1)" [not null]
+  "billing_sk" INT [not null]
+  "product_sk" INT [not null]
+  "unit_price" DECIMAL(7,2)
+  "quantity" INT
 
-ALTER TABLE `hStock` ADD FOREIGN KEY (`date`) REFERENCES `dDate` (`date`);
+  Indexes {
+    detail_sk [pk, name: "PK_hBillingDetail"]
+  }
+}
 
-ALTER TABLE `hStock` ADD FOREIGN KEY (`product_id`) REFERENCES `dProducts` (`product_id`);
+Table "hStock" {
+  "stock_sk" "INT IDENTITY(1,1)" [not null]
+  "product_sk" INT [not null]
+  "date" DATE [not null]
+  "date_t" DATETIME
+  "variation" INT
+
+  Indexes {
+    stock_sk [pk, name: "PK_hStock"]
+  }
+}
+
+Ref "FK_hBilling_dDate":"dDate"."date" < "hBilling"."date"
+
+Ref "FK_hBilling_dCustomer":"dCustomer"."customer_sk" < "hBilling"."customer_sk"
+
+Ref "FK_hBilling_dAgeGroup":"dAgeGroup"."age_group_id" < "hBilling"."customer_age_group_id"
+
+Ref "FK_hBilling_dEmployee":"dEmployee"."employee_sk" < "hBilling"."employee_sk"
+
+Ref "FK_hBillingDetail_hBilling":"hBilling"."billing_sk" < "hBillingDetail"."billing_sk"
+
+Ref "FK_hBillingDetail_dProducts":"dProducts"."product_sk" < "hBillingDetail"."product_sk"
+
+Ref "FK_hStock_dProducts":"dProducts"."product_sk" < "hStock"."product_sk"
+
+Ref "FK_hStock_dDate":"dDate"."date" < "hStock"."date"
