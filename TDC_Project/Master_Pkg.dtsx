@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Master_Pkg"
   DTS:PackageType="5"
-  DTS:VersionBuild="81"
-  DTS:VersionGUID="{7F853875-8AB4-49DD-A5E9-8C9097184D0B}">
+  DTS:VersionBuild="83"
+  DTS:VersionGUID="{958885D5-9DD1-426F-AE6A-5F7F9802A23E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -78,13 +78,13 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Load dCostumers"
+      DTS:refId="Package\Load dCustomers"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{8BFAF6BA-9F1B-4517-BE73-6BA722C3CEA3}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Load dCostumers"
+      DTS:ObjectName="Load dCustomers"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -92,7 +92,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Load dCostumers\Data Conversion"
+              refId="Package\Load dCustomers\Data Conversion"
               componentClassID="Microsoft.DataConvert"
               contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Data Conversion"
@@ -100,73 +100,73 @@
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Load dCostumers\Data Conversion.Inputs[Data Conversion Input]"
+                  refId="Package\Load dCustomers\Data Conversion.Inputs[Data Conversion Input]"
                   name="Data Conversion Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load dCostumers\Data Conversion.Inputs[Data Conversion Input].Columns[first_name]"
+                      refId="Package\Load dCustomers\Data Conversion.Inputs[Data Conversion Input].Columns[first_name]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="first_name"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[first_name]" />
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[first_name]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\Data Conversion.Inputs[Data Conversion Input].Columns[last_name]"
+                      refId="Package\Load dCustomers\Data Conversion.Inputs[Data Conversion Input].Columns[last_name]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="last_name"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[last_name]" />
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[last_name]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\Data Conversion.Inputs[Data Conversion Input].Columns[city]"
+                      refId="Package\Load dCustomers\Data Conversion.Inputs[Data Conversion Input].Columns[city]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="city"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[city]" />
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[city]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\Data Conversion.Inputs[Data Conversion Input].Columns[state]"
+                      refId="Package\Load dCustomers\Data Conversion.Inputs[Data Conversion Input].Columns[state]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="state"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[state]" />
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[state]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\Data Conversion.Inputs[Data Conversion Input].Columns[customer_id]"
+                      refId="Package\Load dCustomers\Data Conversion.Inputs[Data Conversion Input].Columns[customer_id]"
                       cachedDataType="i4"
                       cachedName="customer_id"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_id]" />
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_id]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\Data Conversion.Inputs[Data Conversion Input].Columns[zipcode]"
+                      refId="Package\Load dCustomers\Data Conversion.Inputs[Data Conversion Input].Columns[zipcode]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="zipcode"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[zipcode]" />
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[zipcode]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\Data Conversion.Inputs[Data Conversion Input].Columns[birth_date]"
+                      refId="Package\Load dCustomers\Data Conversion.Inputs[Data Conversion Input].Columns[birth_date]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="birth_date"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[birth_date]" />
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[birth_date]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\Data Conversion.Inputs[Data Conversion Input].Columns[is_retail]"
+                      refId="Package\Load dCustomers\Data Conversion.Inputs[Data Conversion Input].Columns[is_retail]"
                       cachedDataType="bool"
                       cachedName="is_retail"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[is_retail]" />
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[is_retail]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Output]"
+                  refId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Output]"
                   exclusionGroup="1"
                   name="Data Conversion Output"
-                  synchronousInputId="Package\Load dCostumers\Data Conversion.Inputs[Data Conversion Input]">
+                  synchronousInputId="Package\Load dCustomers\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of first_name]"
+                      refId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of first_name]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
                       length="100"
-                      lineageId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of first_name]"
+                      lineageId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of first_name]"
                       name="Copy of first_name"
                       truncationRowDisposition="RedirectRow">
                       <properties>
@@ -174,7 +174,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[first_name]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[first_name]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -182,12 +182,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of last_name]"
+                      refId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of last_name]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
                       length="100"
-                      lineageId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of last_name]"
+                      lineageId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of last_name]"
                       name="Copy of last_name"
                       truncationRowDisposition="RedirectRow">
                       <properties>
@@ -195,7 +195,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[last_name]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[last_name]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -203,12 +203,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of city]"
+                      refId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of city]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
                       length="100"
-                      lineageId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of city]"
+                      lineageId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of city]"
                       name="Copy of city"
                       truncationRowDisposition="RedirectRow">
                       <properties>
@@ -216,7 +216,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[city]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[city]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -224,12 +224,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of state]"
+                      refId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of state]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
                       length="100"
-                      lineageId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of state]"
+                      lineageId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of state]"
                       name="Copy of state"
                       truncationRowDisposition="RedirectRow">
                       <properties>
@@ -237,7 +237,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[state]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[state]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -245,11 +245,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of customer_id]"
+                      refId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of customer_id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
-                      lineageId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of customer_id]"
+                      lineageId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of customer_id]"
                       name="Copy of customer_id"
                       truncationRowDisposition="RedirectRow">
                       <properties>
@@ -257,7 +257,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_id]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_id]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -265,12 +265,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of zipcode]"
+                      refId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of zipcode]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
                       length="20"
-                      lineageId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of zipcode]"
+                      lineageId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of zipcode]"
                       name="Copy of zipcode"
                       truncationRowDisposition="RedirectRow">
                       <properties>
@@ -278,7 +278,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[zipcode]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[zipcode]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -286,11 +286,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of birth_date]"
+                      refId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of birth_date]"
                       dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
-                      lineageId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of birth_date]"
+                      lineageId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of birth_date]"
                       name="Copy of birth_date"
                       truncationRowDisposition="RedirectRow">
                       <properties>
@@ -298,7 +298,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[birth_date]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[birth_date]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -306,11 +306,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of is_retail]"
+                      refId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of is_retail]"
                       dataType="bool"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
-                      lineageId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of is_retail]"
+                      lineageId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of is_retail]"
                       name="Copy of is_retail"
                       truncationRowDisposition="RedirectRow">
                       <properties>
@@ -318,7 +318,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[is_retail]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[is_retail]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -329,22 +329,22 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Error Output]"
+                  refId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Data Conversion Error Output"
-                  synchronousInputId="Package\Load dCostumers\Data Conversion.Inputs[Data Conversion Input]">
+                  synchronousInputId="Package\Load dCustomers\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      refId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -353,7 +353,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Load dCostumers\Data Conversion 1"
+              refId="Package\Load dCustomers\Data Conversion 1"
               componentClassID="Microsoft.DataConvert"
               contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Data Conversion"
@@ -361,73 +361,73 @@
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Load dCostumers\Data Conversion 1.Inputs[Data Conversion Input]"
+                  refId="Package\Load dCustomers\Data Conversion 1.Inputs[Data Conversion Input]"
                   name="Data Conversion Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load dCostumers\Data Conversion 1.Inputs[Data Conversion Input].Columns[first_name]"
+                      refId="Package\Load dCustomers\Data Conversion 1.Inputs[Data Conversion Input].Columns[first_name]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="first_name"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[first_name]" />
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[first_name]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\Data Conversion 1.Inputs[Data Conversion Input].Columns[last_name]"
+                      refId="Package\Load dCustomers\Data Conversion 1.Inputs[Data Conversion Input].Columns[last_name]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="last_name"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[last_name]" />
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[last_name]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\Data Conversion 1.Inputs[Data Conversion Input].Columns[city]"
+                      refId="Package\Load dCustomers\Data Conversion 1.Inputs[Data Conversion Input].Columns[city]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="city"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[city]" />
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[city]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\Data Conversion 1.Inputs[Data Conversion Input].Columns[state]"
+                      refId="Package\Load dCustomers\Data Conversion 1.Inputs[Data Conversion Input].Columns[state]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="state"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[state]" />
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[state]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\Data Conversion 1.Inputs[Data Conversion Input].Columns[customer_id]"
+                      refId="Package\Load dCustomers\Data Conversion 1.Inputs[Data Conversion Input].Columns[customer_id]"
                       cachedDataType="i4"
                       cachedName="customer_id"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_id]" />
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_id]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\Data Conversion 1.Inputs[Data Conversion Input].Columns[zipcode]"
+                      refId="Package\Load dCustomers\Data Conversion 1.Inputs[Data Conversion Input].Columns[zipcode]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="zipcode"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[zipcode]" />
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[zipcode]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\Data Conversion 1.Inputs[Data Conversion Input].Columns[birth_date]"
+                      refId="Package\Load dCustomers\Data Conversion 1.Inputs[Data Conversion Input].Columns[birth_date]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="birth_date"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[birth_date]" />
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[birth_date]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\Data Conversion 1.Inputs[Data Conversion Input].Columns[is_retail]"
+                      refId="Package\Load dCustomers\Data Conversion 1.Inputs[Data Conversion Input].Columns[is_retail]"
                       cachedDataType="bool"
                       cachedName="is_retail"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[is_retail]" />
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[is_retail]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Output]"
+                  refId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Output]"
                   exclusionGroup="1"
                   name="Data Conversion Output"
-                  synchronousInputId="Package\Load dCostumers\Data Conversion 1.Inputs[Data Conversion Input]">
+                  synchronousInputId="Package\Load dCustomers\Data Conversion 1.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of first_name]"
+                      refId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of first_name]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
                       length="100"
-                      lineageId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of first_name]"
+                      lineageId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of first_name]"
                       name="Copy of first_name"
                       truncationRowDisposition="RedirectRow">
                       <properties>
@@ -435,7 +435,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[first_name]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[first_name]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -443,12 +443,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of last_name]"
+                      refId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of last_name]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
                       length="100"
-                      lineageId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of last_name]"
+                      lineageId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of last_name]"
                       name="Copy of last_name"
                       truncationRowDisposition="RedirectRow">
                       <properties>
@@ -456,7 +456,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[last_name]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[last_name]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -464,12 +464,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of city]"
+                      refId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of city]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
                       length="100"
-                      lineageId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of city]"
+                      lineageId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of city]"
                       name="Copy of city"
                       truncationRowDisposition="RedirectRow">
                       <properties>
@@ -477,7 +477,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[city]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[city]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -485,12 +485,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of state]"
+                      refId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of state]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
                       length="100"
-                      lineageId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of state]"
+                      lineageId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of state]"
                       name="Copy of state"
                       truncationRowDisposition="RedirectRow">
                       <properties>
@@ -498,7 +498,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[state]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[state]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -506,11 +506,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of customer_id]"
+                      refId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of customer_id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
-                      lineageId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of customer_id]"
+                      lineageId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of customer_id]"
                       name="Copy of customer_id"
                       truncationRowDisposition="RedirectRow">
                       <properties>
@@ -518,7 +518,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_id]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_id]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -526,12 +526,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of zipcode]"
+                      refId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of zipcode]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
                       length="20"
-                      lineageId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of zipcode]"
+                      lineageId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of zipcode]"
                       name="Copy of zipcode"
                       truncationRowDisposition="RedirectRow">
                       <properties>
@@ -539,7 +539,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[zipcode]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[zipcode]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -547,11 +547,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of birth_date]"
+                      refId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of birth_date]"
                       dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
-                      lineageId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of birth_date]"
+                      lineageId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of birth_date]"
                       name="Copy of birth_date"
                       truncationRowDisposition="RedirectRow">
                       <properties>
@@ -559,7 +559,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[birth_date]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[birth_date]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -567,11 +567,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of is_retail]"
+                      refId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of is_retail]"
                       dataType="bool"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
-                      lineageId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of is_retail]"
+                      lineageId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of is_retail]"
                       name="Copy of is_retail"
                       truncationRowDisposition="RedirectRow">
                       <properties>
@@ -579,7 +579,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[is_retail]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[is_retail]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -590,22 +590,22 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Error Output]"
+                  refId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Data Conversion Error Output"
-                  synchronousInputId="Package\Load dCostumers\Data Conversion 1.Inputs[Data Conversion Input]">
+                  synchronousInputId="Package\Load dCustomers\Data Conversion 1.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      refId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -614,7 +614,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Load dCostumers\Derived Column"
+              refId="Package\Load dCustomers\Derived Column"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
@@ -622,18 +622,18 @@
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Load dCostumers\Derived Column.Inputs[Derived Column Input]"
+                  refId="Package\Load dCustomers\Derived Column.Inputs[Derived Column Input]"
                   description="Input to the Derived Column Transformation"
                   name="Derived Column Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load dCostumers\Derived Column.Inputs[Derived Column Input].Columns[birth_date]"
+                      refId="Package\Load dCustomers\Derived Column.Inputs[Derived Column Input].Columns[birth_date]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="birth_date"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[birth_date]"
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[birth_date]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -641,7 +641,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[TRIM]([REPLACE]([REPLACE]([REPLACE](#{Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[birth_date]},"*",""),"j",""),"J",""))</property>
+                          name="Expression">[TRIM]([REPLACE]([REPLACE]([REPLACE](#{Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[birth_date]},"*",""),"j",""),"J",""))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -656,31 +656,31 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Load dCostumers\Derived Column.Outputs[Derived Column Output]"
+                  refId="Package\Load dCustomers\Derived Column.Outputs[Derived Column Output]"
                   description="Default Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   name="Derived Column Output"
-                  synchronousInputId="Package\Load dCostumers\Derived Column.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\Load dCustomers\Derived Column.Inputs[Derived Column Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Load dCostumers\Derived Column.Outputs[Derived Column Error Output]"
+                  refId="Package\Load dCustomers\Derived Column.Outputs[Derived Column Error Output]"
                   description="Error Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Derived Column Error Output"
-                  synchronousInputId="Package\Load dCostumers\Derived Column.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\Load dCustomers\Derived Column.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load dCostumers\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      refId="Package\Load dCustomers\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load dCostumers\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load dCustomers\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load dCostumers\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load dCustomers\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load dCostumers\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load dCustomers\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -689,7 +689,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Load dCostumers\Derived Column 1"
+              refId="Package\Load dCustomers\Derived Column 1"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
@@ -697,18 +697,18 @@
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Load dCostumers\Derived Column 1.Inputs[Derived Column Input]"
+                  refId="Package\Load dCustomers\Derived Column 1.Inputs[Derived Column Input]"
                   description="Input to the Derived Column Transformation"
                   name="Derived Column Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load dCostumers\Derived Column 1.Inputs[Derived Column Input].Columns[birth_date]"
+                      refId="Package\Load dCustomers\Derived Column 1.Inputs[Derived Column Input].Columns[birth_date]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="birth_date"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[birth_date]"
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[birth_date]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -716,7 +716,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[RIGHT](#{Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[birth_date]},4) + "-01-01"</property>
+                          name="Expression">[RIGHT](#{Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[birth_date]},4) + "-01-01"</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -731,31 +731,31 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Load dCostumers\Derived Column 1.Outputs[Derived Column Output]"
+                  refId="Package\Load dCustomers\Derived Column 1.Outputs[Derived Column Output]"
                   description="Default Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   name="Derived Column Output"
-                  synchronousInputId="Package\Load dCostumers\Derived Column 1.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\Load dCustomers\Derived Column 1.Inputs[Derived Column Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Load dCostumers\Derived Column 1.Outputs[Derived Column Error Output]"
+                  refId="Package\Load dCustomers\Derived Column 1.Outputs[Derived Column Error Output]"
                   description="Error Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Derived Column Error Output"
-                  synchronousInputId="Package\Load dCostumers\Derived Column 1.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\Load dCustomers\Derived Column 1.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load dCostumers\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      refId="Package\Load dCustomers\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load dCostumers\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load dCustomers\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load dCostumers\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load dCustomers\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load dCostumers\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load dCustomers\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -764,7 +764,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Load dCostumers\OLE DB Destination"
+              refId="Package\Load dCustomers\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -821,7 +821,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load dCostumers\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\Load dCustomers\OLE DB Destination.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[Intermediate_DB]"
                   connectionManagerRefId="Package.ConnectionManagers[Intermediate_DB]"
                   description="The OLE DB runtime connection used to access the database."
@@ -829,107 +829,107 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Load dCostumers\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Load dCustomers\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load dCostumers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of customer_id]"
+                      refId="Package\Load dCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of customer_id]"
                       cachedDataType="i4"
                       cachedName="Copy of customer_id"
-                      externalMetadataColumnId="Package\Load dCostumers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_id]"
-                      lineageId="Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of customer_id]" />
+                      externalMetadataColumnId="Package\Load dCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_id]"
+                      lineageId="Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of customer_id]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of first_name]"
+                      refId="Package\Load dCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of first_name]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="Copy of first_name"
-                      externalMetadataColumnId="Package\Load dCostumers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[first_name]"
-                      lineageId="Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of first_name]" />
+                      externalMetadataColumnId="Package\Load dCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[first_name]"
+                      lineageId="Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of first_name]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of last_name]"
+                      refId="Package\Load dCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of last_name]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="Copy of last_name"
-                      externalMetadataColumnId="Package\Load dCostumers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[last_name]"
-                      lineageId="Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of last_name]" />
+                      externalMetadataColumnId="Package\Load dCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[last_name]"
+                      lineageId="Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of last_name]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of birth_date]"
+                      refId="Package\Load dCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of birth_date]"
                       cachedDataType="dbDate"
                       cachedName="Copy of birth_date"
-                      externalMetadataColumnId="Package\Load dCostumers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[birth_date]"
-                      lineageId="Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of birth_date]" />
+                      externalMetadataColumnId="Package\Load dCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[birth_date]"
+                      lineageId="Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of birth_date]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of city]"
+                      refId="Package\Load dCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of city]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="Copy of city"
-                      externalMetadataColumnId="Package\Load dCostumers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[city]"
-                      lineageId="Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of city]" />
+                      externalMetadataColumnId="Package\Load dCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      lineageId="Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of city]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of state]"
+                      refId="Package\Load dCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of state]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="Copy of state"
-                      externalMetadataColumnId="Package\Load dCostumers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[state]"
-                      lineageId="Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of state]" />
+                      externalMetadataColumnId="Package\Load dCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[state]"
+                      lineageId="Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of state]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of zipcode]"
+                      refId="Package\Load dCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of zipcode]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="Copy of zipcode"
-                      externalMetadataColumnId="Package\Load dCostumers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[zipcode]"
-                      lineageId="Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of zipcode]" />
+                      externalMetadataColumnId="Package\Load dCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[zipcode]"
+                      lineageId="Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of zipcode]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of is_retail]"
+                      refId="Package\Load dCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of is_retail]"
                       cachedDataType="bool"
                       cachedName="Copy of is_retail"
-                      externalMetadataColumnId="Package\Load dCostumers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[is_retail]"
-                      lineageId="Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of is_retail]" />
+                      externalMetadataColumnId="Package\Load dCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[is_retail]"
+                      lineageId="Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of is_retail]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load dCostumers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_id]"
+                      refId="Package\Load dCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_id]"
                       dataType="i4"
                       name="customer_id" />
                     <externalMetadataColumn
-                      refId="Package\Load dCostumers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[first_name]"
+                      refId="Package\Load dCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[first_name]"
                       dataType="wstr"
                       length="100"
                       name="first_name" />
                     <externalMetadataColumn
-                      refId="Package\Load dCostumers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[last_name]"
+                      refId="Package\Load dCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[last_name]"
                       dataType="wstr"
                       length="100"
                       name="last_name" />
                     <externalMetadataColumn
-                      refId="Package\Load dCostumers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[birth_date]"
+                      refId="Package\Load dCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[birth_date]"
                       dataType="dbDate"
                       name="birth_date" />
                     <externalMetadataColumn
-                      refId="Package\Load dCostumers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      refId="Package\Load dCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[city]"
                       dataType="wstr"
                       length="100"
                       name="city" />
                     <externalMetadataColumn
-                      refId="Package\Load dCostumers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[state]"
+                      refId="Package\Load dCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[state]"
                       dataType="wstr"
                       length="100"
                       name="state" />
                     <externalMetadataColumn
-                      refId="Package\Load dCostumers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[zipcode]"
+                      refId="Package\Load dCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[zipcode]"
                       dataType="wstr"
                       length="20"
                       name="zipcode" />
                     <externalMetadataColumn
-                      refId="Package\Load dCostumers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[is_retail]"
+                      refId="Package\Load dCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[is_retail]"
                       dataType="bool"
                       name="is_retail" />
                     <externalMetadataColumn
-                      refId="Package\Load dCostumers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_sk]"
+                      refId="Package\Load dCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_sk]"
                       dataType="i4"
                       name="customer_sk" />
                   </externalMetadataColumns>
@@ -937,22 +937,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Load dCostumers\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Load dCustomers\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Load dCostumers\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Load dCustomers\OLE DB Destination.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load dCostumers\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Load dCustomers\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load dCostumers\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load dCustomers\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load dCostumers\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load dCustomers\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load dCostumers\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load dCustomers\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -961,7 +961,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Load dCostumers\OLE DB Destination error"
+              refId="Package\Load dCustomers\OLE DB Destination error"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -1018,7 +1018,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load dCostumers\OLE DB Destination error.Connections[OleDbConnection]"
+                  refId="Package\Load dCustomers\OLE DB Destination error.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[Intermediate_DB]"
                   connectionManagerRefId="Package.ConnectionManagers[Intermediate_DB]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1026,135 +1026,135 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input]"
+                  refId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].Columns[customer_id]"
+                      refId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].Columns[customer_id]"
                       cachedDataType="i4"
                       cachedName="customer_id"
-                      externalMetadataColumnId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[customer_id]"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_id]" />
+                      externalMetadataColumnId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[customer_id]"
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_id]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].Columns[first_name]"
+                      refId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].Columns[first_name]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="first_name"
-                      externalMetadataColumnId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[first_name]"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[first_name]" />
+                      externalMetadataColumnId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[first_name]"
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[first_name]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].Columns[last_name]"
+                      refId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].Columns[last_name]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="last_name"
-                      externalMetadataColumnId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[last_name]"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[last_name]" />
+                      externalMetadataColumnId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[last_name]"
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[last_name]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].Columns[birth_date]"
+                      refId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].Columns[birth_date]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="birth_date"
-                      externalMetadataColumnId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[birth_date]"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[birth_date]" />
+                      externalMetadataColumnId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[birth_date]"
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[birth_date]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].Columns[city]"
+                      refId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].Columns[city]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="city"
-                      externalMetadataColumnId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[city]"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[city]" />
+                      externalMetadataColumnId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[city]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].Columns[state]"
+                      refId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].Columns[state]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="state"
-                      externalMetadataColumnId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[state]"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[state]" />
+                      externalMetadataColumnId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[state]"
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[state]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].Columns[zipcode]"
+                      refId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].Columns[zipcode]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="zipcode"
-                      externalMetadataColumnId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[zipcode]"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[zipcode]" />
+                      externalMetadataColumnId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[zipcode]"
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[zipcode]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].Columns[is_retail]"
+                      refId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].Columns[is_retail]"
                       cachedDataType="bool"
                       cachedName="is_retail"
-                      externalMetadataColumnId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[is_retail]"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[is_retail]" />
+                      externalMetadataColumnId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[is_retail]"
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[is_retail]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].Columns[ErrorColumn]"
+                      refId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].Columns[ErrorColumn]"
                       cachedDataType="i4"
                       cachedName="ErrorColumn"
-                      externalMetadataColumnId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[error_column]"
-                      lineageId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]" />
+                      externalMetadataColumnId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[error_column]"
+                      lineageId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]" />
                     <inputColumn
-                      refId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].Columns[ErrorCode]"
+                      refId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].Columns[ErrorCode]"
                       cachedDataType="i4"
                       cachedName="ErrorCode"
-                      externalMetadataColumnId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[error_description]"
-                      lineageId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]" />
+                      externalMetadataColumnId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[error_description]"
+                      lineageId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[customer_id]"
+                      refId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[customer_id]"
                       codePage="1252"
                       dataType="str"
                       length="100"
                       name="customer_id" />
                     <externalMetadataColumn
-                      refId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[first_name]"
+                      refId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[first_name]"
                       dataType="wstr"
                       length="100"
                       name="first_name" />
                     <externalMetadataColumn
-                      refId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[last_name]"
+                      refId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[last_name]"
                       dataType="wstr"
                       length="100"
                       name="last_name" />
                     <externalMetadataColumn
-                      refId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[birth_date]"
+                      refId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[birth_date]"
                       dataType="wstr"
                       length="100"
                       name="birth_date" />
                     <externalMetadataColumn
-                      refId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      refId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[city]"
                       dataType="wstr"
                       length="100"
                       name="city" />
                     <externalMetadataColumn
-                      refId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[state]"
+                      refId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[state]"
                       dataType="wstr"
                       length="100"
                       name="state" />
                     <externalMetadataColumn
-                      refId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[zipcode]"
+                      refId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[zipcode]"
                       dataType="wstr"
                       length="100"
                       name="zipcode" />
                     <externalMetadataColumn
-                      refId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[error_column]"
+                      refId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[error_column]"
                       codePage="1252"
                       dataType="str"
                       length="100"
                       name="error_column" />
                     <externalMetadataColumn
-                      refId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[error_description]"
+                      refId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[error_description]"
                       codePage="1252"
                       dataType="str"
                       length="500"
                       name="error_description" />
                     <externalMetadataColumn
-                      refId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[error_timestamp]"
+                      refId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[error_timestamp]"
                       dataType="dbTimeStamp"
                       name="error_timestamp" />
                     <externalMetadataColumn
-                      refId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[is_retail]"
+                      refId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input].ExternalColumns[is_retail]"
                       dataType="wstr"
                       length="100"
                       name="is_retail" />
@@ -1163,22 +1163,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Load dCostumers\OLE DB Destination error.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Load dCustomers\OLE DB Destination error.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load dCostumers\OLE DB Destination error.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Load dCustomers\OLE DB Destination error.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load dCostumers\OLE DB Destination error.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load dCustomers\OLE DB Destination error.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load dCostumers\OLE DB Destination error.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load dCustomers\OLE DB Destination error.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load dCostumers\OLE DB Destination error.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load dCustomers\OLE DB Destination error.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1187,7 +1187,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Load dCostumers\OLE DB Source"
+              refId="Package\Load dCustomers\OLE DB Source"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
@@ -1248,7 +1248,7 @@ FROM Customers;</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load dCostumers\OLE DB Source.Connections[OleDbConnection]"
+                  refId="Package\Load dCustomers\OLE DB Source.Connections[OleDbConnection]"
                   connectionManagerID="{19020882-DDB9-4519-B8B3-99D12C900694}:external"
                   connectionManagerRefId="Project.ConnectionManagers[Staging_DB]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1256,191 +1256,191 @@ FROM Customers;</property>
               </connections>
               <outputs>
                 <output
-                  refId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output]"
+                  refId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_id]"
+                      refId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[customer_id]"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_id]"
+                      externalMetadataColumnId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[customer_id]"
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_id]"
                       name="customer_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[first_name]"
+                      refId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[first_name]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[first_name]"
+                      externalMetadataColumnId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[first_name]"
                       length="255"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[first_name]"
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[first_name]"
                       name="first_name"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[last_name]"
+                      refId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[last_name]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[last_name]"
+                      externalMetadataColumnId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[last_name]"
                       length="255"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[last_name]"
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[last_name]"
                       name="last_name"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[birth_date]"
+                      refId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[birth_date]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[birth_date]"
+                      externalMetadataColumnId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[birth_date]"
                       length="20"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[birth_date]"
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[birth_date]"
                       name="birth_date"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[city]"
+                      refId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[city]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[city]"
+                      externalMetadataColumnId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[city]"
                       length="255"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[city]"
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[city]"
                       name="city"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[state]"
+                      refId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[state]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[state]"
+                      externalMetadataColumnId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[state]"
                       length="255"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[state]"
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[state]"
                       name="state"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[zipcode]"
+                      refId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[zipcode]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[zipcode]"
+                      externalMetadataColumnId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[zipcode]"
                       length="20"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[zipcode]"
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[zipcode]"
                       name="zipcode"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[is_retail]"
+                      refId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[is_retail]"
                       dataType="bool"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[is_retail]"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].Columns[is_retail]"
+                      externalMetadataColumnId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[is_retail]"
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[is_retail]"
                       name="is_retail"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[customer_id]"
+                      refId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[customer_id]"
                       dataType="i4"
                       name="customer_id" />
                     <externalMetadataColumn
-                      refId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[first_name]"
+                      refId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[first_name]"
                       dataType="wstr"
                       length="255"
                       name="first_name" />
                     <externalMetadataColumn
-                      refId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[last_name]"
+                      refId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[last_name]"
                       dataType="wstr"
                       length="255"
                       name="last_name" />
                     <externalMetadataColumn
-                      refId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[birth_date]"
+                      refId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[birth_date]"
                       dataType="wstr"
                       length="20"
                       name="birth_date" />
                     <externalMetadataColumn
-                      refId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[city]"
+                      refId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[city]"
                       dataType="wstr"
                       length="255"
                       name="city" />
                     <externalMetadataColumn
-                      refId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[state]"
+                      refId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[state]"
                       dataType="wstr"
                       length="255"
                       name="state" />
                     <externalMetadataColumn
-                      refId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[zipcode]"
+                      refId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[zipcode]"
                       dataType="wstr"
                       length="20"
                       name="zipcode" />
                     <externalMetadataColumn
-                      refId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[is_retail]"
+                      refId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[is_retail]"
                       dataType="bool"
                       name="is_retail" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[customer_id]"
+                      refId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[customer_id]"
                       dataType="i4"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[customer_id]"
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[customer_id]"
                       name="customer_id" />
                     <outputColumn
-                      refId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[first_name]"
+                      refId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[first_name]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[first_name]"
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[first_name]"
                       name="first_name" />
                     <outputColumn
-                      refId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[last_name]"
+                      refId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[last_name]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[last_name]"
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[last_name]"
                       name="last_name" />
                     <outputColumn
-                      refId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[birth_date]"
+                      refId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[birth_date]"
                       dataType="wstr"
                       length="20"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[birth_date]"
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[birth_date]"
                       name="birth_date" />
                     <outputColumn
-                      refId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[city]"
+                      refId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[city]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[city]"
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[city]"
                       name="city" />
                     <outputColumn
-                      refId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[state]"
+                      refId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[state]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[state]"
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[state]"
                       name="state" />
                     <outputColumn
-                      refId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[zipcode]"
+                      refId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[zipcode]"
                       dataType="wstr"
                       length="20"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[zipcode]"
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[zipcode]"
                       name="zipcode" />
                     <outputColumn
-                      refId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[is_retail]"
+                      refId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[is_retail]"
                       dataType="bool"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[is_retail]"
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[is_retail]"
                       name="is_retail" />
                     <outputColumn
-                      refId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1449,7 +1449,7 @@ FROM Customers;</property>
               </outputs>
             </component>
             <component
-              refId="Package\Load dCostumers\Union All"
+              refId="Package\Load dCustomers\Union All"
               componentClassID="Microsoft.UnionAll"
               contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
@@ -1457,240 +1457,240 @@ FROM Customers;</property>
               version="1">
               <inputs>
                 <input
-                  refId="Package\Load dCostumers\Union All.Inputs[Union All Input 1]"
+                  refId="Package\Load dCustomers\Union All.Inputs[Union All Input 1]"
                   name="Union All Input 1">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load dCostumers\Union All.Inputs[Union All Input 1].Columns[Copy of first_name]"
+                      refId="Package\Load dCustomers\Union All.Inputs[Union All Input 1].Columns[Copy of first_name]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="Copy of first_name"
-                      lineageId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of first_name]">
+                      lineageId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of first_name]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of first_name]}</property>
+                          name="OutputColumnLineageID">#{Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of first_name]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load dCostumers\Union All.Inputs[Union All Input 1].Columns[Copy of last_name]"
+                      refId="Package\Load dCustomers\Union All.Inputs[Union All Input 1].Columns[Copy of last_name]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="Copy of last_name"
-                      lineageId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of last_name]">
+                      lineageId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of last_name]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of last_name]}</property>
+                          name="OutputColumnLineageID">#{Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of last_name]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load dCostumers\Union All.Inputs[Union All Input 1].Columns[Copy of city]"
+                      refId="Package\Load dCustomers\Union All.Inputs[Union All Input 1].Columns[Copy of city]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="Copy of city"
-                      lineageId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of city]">
+                      lineageId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of city]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of city]}</property>
+                          name="OutputColumnLineageID">#{Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of city]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load dCostumers\Union All.Inputs[Union All Input 1].Columns[Copy of state]"
+                      refId="Package\Load dCustomers\Union All.Inputs[Union All Input 1].Columns[Copy of state]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="Copy of state"
-                      lineageId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of state]">
+                      lineageId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of state]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of state]}</property>
+                          name="OutputColumnLineageID">#{Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of state]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load dCostumers\Union All.Inputs[Union All Input 1].Columns[Copy of customer_id]"
+                      refId="Package\Load dCustomers\Union All.Inputs[Union All Input 1].Columns[Copy of customer_id]"
                       cachedDataType="i4"
                       cachedName="Copy of customer_id"
-                      lineageId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of customer_id]">
+                      lineageId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of customer_id]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of customer_id]}</property>
+                          name="OutputColumnLineageID">#{Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of customer_id]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load dCostumers\Union All.Inputs[Union All Input 1].Columns[Copy of zipcode]"
+                      refId="Package\Load dCustomers\Union All.Inputs[Union All Input 1].Columns[Copy of zipcode]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="Copy of zipcode"
-                      lineageId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of zipcode]">
+                      lineageId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of zipcode]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of zipcode]}</property>
+                          name="OutputColumnLineageID">#{Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of zipcode]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load dCostumers\Union All.Inputs[Union All Input 1].Columns[Copy of birth_date]"
+                      refId="Package\Load dCustomers\Union All.Inputs[Union All Input 1].Columns[Copy of birth_date]"
                       cachedDataType="dbDate"
                       cachedName="Copy of birth_date"
-                      lineageId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of birth_date]">
+                      lineageId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of birth_date]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of birth_date]}</property>
+                          name="OutputColumnLineageID">#{Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of birth_date]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load dCostumers\Union All.Inputs[Union All Input 1].Columns[Copy of is_retail]"
+                      refId="Package\Load dCustomers\Union All.Inputs[Union All Input 1].Columns[Copy of is_retail]"
                       cachedDataType="bool"
                       cachedName="Copy of is_retail"
-                      lineageId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of is_retail]">
+                      lineageId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of is_retail]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of is_retail]}</property>
+                          name="OutputColumnLineageID">#{Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of is_retail]}</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
                 <input
-                  refId="Package\Load dCostumers\Union All.Inputs[Union All Input 2]"
+                  refId="Package\Load dCustomers\Union All.Inputs[Union All Input 2]"
                   hasSideEffects="true"
                   name="Union All Input 2">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load dCostumers\Union All.Inputs[Union All Input 2].Columns[Copy of first_name]"
+                      refId="Package\Load dCustomers\Union All.Inputs[Union All Input 2].Columns[Copy of first_name]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="Copy of first_name"
-                      lineageId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of first_name]">
+                      lineageId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of first_name]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of first_name]}</property>
+                          name="OutputColumnLineageID">#{Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of first_name]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load dCostumers\Union All.Inputs[Union All Input 2].Columns[Copy of last_name]"
+                      refId="Package\Load dCustomers\Union All.Inputs[Union All Input 2].Columns[Copy of last_name]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="Copy of last_name"
-                      lineageId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of last_name]">
+                      lineageId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of last_name]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of last_name]}</property>
+                          name="OutputColumnLineageID">#{Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of last_name]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load dCostumers\Union All.Inputs[Union All Input 2].Columns[Copy of city]"
+                      refId="Package\Load dCustomers\Union All.Inputs[Union All Input 2].Columns[Copy of city]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="Copy of city"
-                      lineageId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of city]">
+                      lineageId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of city]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of city]}</property>
+                          name="OutputColumnLineageID">#{Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of city]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load dCostumers\Union All.Inputs[Union All Input 2].Columns[Copy of state]"
+                      refId="Package\Load dCustomers\Union All.Inputs[Union All Input 2].Columns[Copy of state]"
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="Copy of state"
-                      lineageId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of state]">
+                      lineageId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of state]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of state]}</property>
+                          name="OutputColumnLineageID">#{Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of state]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load dCostumers\Union All.Inputs[Union All Input 2].Columns[Copy of customer_id]"
+                      refId="Package\Load dCustomers\Union All.Inputs[Union All Input 2].Columns[Copy of customer_id]"
                       cachedDataType="i4"
                       cachedName="Copy of customer_id"
-                      lineageId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of customer_id]">
+                      lineageId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of customer_id]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of customer_id]}</property>
+                          name="OutputColumnLineageID">#{Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of customer_id]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load dCostumers\Union All.Inputs[Union All Input 2].Columns[Copy of zipcode]"
+                      refId="Package\Load dCustomers\Union All.Inputs[Union All Input 2].Columns[Copy of zipcode]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="Copy of zipcode"
-                      lineageId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of zipcode]">
+                      lineageId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of zipcode]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of zipcode]}</property>
+                          name="OutputColumnLineageID">#{Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of zipcode]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load dCostumers\Union All.Inputs[Union All Input 2].Columns[Copy of birth_date]"
+                      refId="Package\Load dCustomers\Union All.Inputs[Union All Input 2].Columns[Copy of birth_date]"
                       cachedDataType="dbDate"
                       cachedName="Copy of birth_date"
-                      lineageId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of birth_date]">
+                      lineageId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of birth_date]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of birth_date]}</property>
+                          name="OutputColumnLineageID">#{Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of birth_date]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load dCostumers\Union All.Inputs[Union All Input 2].Columns[Copy of is_retail]"
+                      refId="Package\Load dCustomers\Union All.Inputs[Union All Input 2].Columns[Copy of is_retail]"
                       cachedDataType="bool"
                       cachedName="Copy of is_retail"
-                      lineageId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of is_retail]">
+                      lineageId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of is_retail]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of is_retail]}</property>
+                          name="OutputColumnLineageID">#{Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of is_retail]}</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
                 <input
-                  refId="Package\Load dCostumers\Union All.Inputs[Union All Input 3]"
+                  refId="Package\Load dCustomers\Union All.Inputs[Union All Input 3]"
                   dangling="true"
                   hasSideEffects="true"
                   name="Union All Input 3">
@@ -1699,53 +1699,53 @@ FROM Customers;</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Load dCostumers\Union All.Outputs[Union All Output 1]"
+                  refId="Package\Load dCustomers\Union All.Outputs[Union All Output 1]"
                   name="Union All Output 1">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of first_name]"
+                      refId="Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of first_name]"
                       dataType="wstr"
                       length="100"
-                      lineageId="Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of first_name]"
+                      lineageId="Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of first_name]"
                       name="Copy of first_name" />
                     <outputColumn
-                      refId="Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of last_name]"
+                      refId="Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of last_name]"
                       dataType="wstr"
                       length="100"
-                      lineageId="Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of last_name]"
+                      lineageId="Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of last_name]"
                       name="Copy of last_name" />
                     <outputColumn
-                      refId="Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of city]"
+                      refId="Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of city]"
                       dataType="wstr"
                       length="100"
-                      lineageId="Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of city]"
+                      lineageId="Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of city]"
                       name="Copy of city" />
                     <outputColumn
-                      refId="Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of state]"
+                      refId="Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of state]"
                       dataType="wstr"
                       length="100"
-                      lineageId="Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of state]"
+                      lineageId="Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of state]"
                       name="Copy of state" />
                     <outputColumn
-                      refId="Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of customer_id]"
+                      refId="Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of customer_id]"
                       dataType="i4"
-                      lineageId="Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of customer_id]"
+                      lineageId="Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of customer_id]"
                       name="Copy of customer_id" />
                     <outputColumn
-                      refId="Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of zipcode]"
+                      refId="Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of zipcode]"
                       dataType="wstr"
                       length="20"
-                      lineageId="Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of zipcode]"
+                      lineageId="Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of zipcode]"
                       name="Copy of zipcode" />
                     <outputColumn
-                      refId="Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of birth_date]"
+                      refId="Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of birth_date]"
                       dataType="dbDate"
-                      lineageId="Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of birth_date]"
+                      lineageId="Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of birth_date]"
                       name="Copy of birth_date" />
                     <outputColumn
-                      refId="Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of is_retail]"
+                      refId="Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of is_retail]"
                       dataType="bool"
-                      lineageId="Package\Load dCostumers\Union All.Outputs[Union All Output 1].Columns[Copy of is_retail]"
+                      lineageId="Package\Load dCustomers\Union All.Outputs[Union All Output 1].Columns[Copy of is_retail]"
                       name="Copy of is_retail" />
                   </outputColumns>
                   <externalMetadataColumns />
@@ -1755,45 +1755,45 @@ FROM Customers;</property>
           </components>
           <paths>
             <path
-              refId="Package\Load dCostumers.Paths[Data Conversion Error Output]"
-              endId="Package\Load dCostumers\Derived Column 1.Inputs[Derived Column Input]"
+              refId="Package\Load dCustomers.Paths[Data Conversion Error Output]"
+              endId="Package\Load dCustomers\Derived Column 1.Inputs[Derived Column Input]"
               name="Data Conversion Error Output"
-              startId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Error Output]" />
+              startId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Error Output]" />
             <path
-              refId="Package\Load dCostumers.Paths[Data Conversion Error Output1]"
-              endId="Package\Load dCostumers\OLE DB Destination error.Inputs[OLE DB Destination Input]"
+              refId="Package\Load dCustomers.Paths[Data Conversion Error Output1]"
+              endId="Package\Load dCustomers\OLE DB Destination error.Inputs[OLE DB Destination Input]"
               name="Data Conversion Error Output"
-              startId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Error Output]" />
+              startId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Error Output]" />
             <path
-              refId="Package\Load dCostumers.Paths[Data Conversion Output]"
-              endId="Package\Load dCostumers\Union All.Inputs[Union All Input 1]"
+              refId="Package\Load dCustomers.Paths[Data Conversion Output]"
+              endId="Package\Load dCustomers\Union All.Inputs[Union All Input 1]"
               name="Data Conversion Output"
-              startId="Package\Load dCostumers\Data Conversion.Outputs[Data Conversion Output]" />
+              startId="Package\Load dCustomers\Data Conversion.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Load dCostumers.Paths[Data Conversion Output1]"
-              endId="Package\Load dCostumers\Union All.Inputs[Union All Input 2]"
+              refId="Package\Load dCustomers.Paths[Data Conversion Output1]"
+              endId="Package\Load dCustomers\Union All.Inputs[Union All Input 2]"
               name="Data Conversion Output"
-              startId="Package\Load dCostumers\Data Conversion 1.Outputs[Data Conversion Output]" />
+              startId="Package\Load dCustomers\Data Conversion 1.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Load dCostumers.Paths[Derived Column Output]"
-              endId="Package\Load dCostumers\Data Conversion 1.Inputs[Data Conversion Input]"
+              refId="Package\Load dCustomers.Paths[Derived Column Output]"
+              endId="Package\Load dCustomers\Data Conversion 1.Inputs[Data Conversion Input]"
               name="Derived Column Output"
-              startId="Package\Load dCostumers\Derived Column 1.Outputs[Derived Column Output]" />
+              startId="Package\Load dCustomers\Derived Column 1.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Load dCostumers.Paths[Derived Column Output1]"
-              endId="Package\Load dCostumers\Data Conversion.Inputs[Data Conversion Input]"
+              refId="Package\Load dCustomers.Paths[Derived Column Output1]"
+              endId="Package\Load dCustomers\Data Conversion.Inputs[Data Conversion Input]"
               name="Derived Column Output"
-              startId="Package\Load dCostumers\Derived Column.Outputs[Derived Column Output]" />
+              startId="Package\Load dCustomers\Derived Column.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Load dCostumers.Paths[OLE DB Source Output]"
-              endId="Package\Load dCostumers\Derived Column.Inputs[Derived Column Input]"
+              refId="Package\Load dCustomers.Paths[OLE DB Source Output]"
+              endId="Package\Load dCustomers\Derived Column.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
-              startId="Package\Load dCostumers\OLE DB Source.Outputs[OLE DB Source Output]" />
+              startId="Package\Load dCustomers\OLE DB Source.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\Load dCostumers.Paths[Union All Output 1]"
-              endId="Package\Load dCostumers\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              refId="Package\Load dCustomers.Paths[Union All Output 1]"
+              endId="Package\Load dCustomers\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Union All Output 1"
-              startId="Package\Load dCostumers\Union All.Outputs[Union All Output 1]" />
+              startId="Package\Load dCustomers\Union All.Outputs[Union All Output 1]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -14317,7 +14317,7 @@ FROM Stock</property>
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
       DTS:DTSID="{145BFAF1-7BDD-412D-A091-88590478B5FB}"
-      DTS:From="Package\Load dCostumers"
+      DTS:From="Package\Load dCustomers"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
       DTS:To="Package\Load hBilling" />
@@ -14433,85 +14433,85 @@ FROM Stock</property>
         <NodeLayout
           Size="184.8,41.6"
           Id="Package\Consider sales in stock"
-          TopLeft="514.583305217741,365.91666432379" />
+          TopLeft="242.708320072336,258.666665069593" />
         <NodeLayout
           Size="176.8,41.6"
           Id="Package\Load Data into Billing"
-          TopLeft="737.499959704778,358.58333083979" />
+          TopLeft="473.958307437392,186.333332037595" />
         <NodeLayout
           Size="160,41.6"
-          Id="Package\Load dCostumers"
-          TopLeft="266.666652096643,142.999999005596" />
+          Id="Package\Load dCustomers"
+          TopLeft="27.0833318535654,90.3106054325975" />
         <NodeLayout
           Size="161.6,41.6"
           Id="Package\Load dEmployees"
-          TopLeft="283.148132677616,69.4296291468249" />
+          TopLeft="25.5723891751767,45.8917505226256" />
         <NodeLayout
           Size="193.6,41.6"
           Id="Package\Load Dimension into DW"
-          TopLeft="510.416638778731,454.999996835987" />
+          TopLeft="243.749986682088,322.833331088391" />
         <NodeLayout
           Size="151.2,41.6"
           Id="Package\Load dProducts"
-          TopLeft="263.092580157482,224.337035723888" />
+          TopLeft="37.0509258411869,177.753702714489" />
         <NodeLayout
           Size="169.6,41.6"
           Id="Package\Load Facts into DW"
-          TopLeft="741.666626143788,456.333330591189" />
+          TopLeft="490.909064087002,261.924241033995" />
         <NodeLayout
           Size="177.6,41.6"
           Id="Package\Load Facts into DW 2"
-          TopLeft="733.333293265768,535.99999764959" />
+          TopLeft="493.939366951736,328.196968791596" />
         <NodeLayout
           Size="138.4,41.6"
           Id="Package\Load hBilling"
-          TopLeft="529.999971042078,149.066665630076" />
+          TopLeft="290.416650799,51.5666663080788" />
         <NodeLayout
           Size="164.8,41.6"
           Id="Package\Load hBillingDetail"
-          TopLeft="742.22218166899,148.970369334449" />
+          TopLeft="472.43052974309,43.887036731852" />
         <NodeLayout
           Size="144,41.6"
           Id="Package\Load Holidays"
-          TopLeft="261.851837544898,447.970367255241" />
+          TopLeft="45.1851827163757,325.553701439845" />
         <NodeLayout
           Size="191.2,41.6"
           Id="Package\Load Prices &amp; Discounts"
-          TopLeft="491.133309383857,266.933331477112" />
+          TopLeft="213.008324579936,152.099998942315" />
         <NodeLayout
           Size="210.4,41.6"
           Id="Package\Load Prices into BillingDetail"
-          TopLeft="718.633296953806,265.199998155832" />
+          TopLeft="454.049978076668,118.949999172836" />
         <NodeLayout
           Size="130.4,41.6"
           Id="Package\Load Stock"
-          TopLeft="271.874985145406,369.416664097789" />
+          TopLeft="49.9999972681211,258.916664866192" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="338.692580157482,224.337035723888">
+          TopLeft="112.650925841187,177.753702714489">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="260.507390884596,-33.6703700938118"
+              EndConnector="246.965724957813,-84.5870364064105"
               Start="0,0"
-              End="260.507390884596,-26.1703700938118">
+              End="246.965724957813,-77.0870364064105">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-12.8351850469059" />
+                    End="0,-38.2935182032053" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-12.8351850469059"
-                    Point2="0,-16.8351850469059"
-                    Point3="4,-16.8351850469059" />
+                    Point1="0,-38.2935182032053"
+                    Point2="0,-42.2935182032053"
+                    Point3="4,-42.2935182032053" />
                   <mssgle:LineSegment
-                    End="256.507390884596,-16.8351850469059" />
+                    End="242.965724957813,-42.2935182032053" />
                   <mssgle:CubicBezierSegment
-                    Point1="256.507390884596,-16.8351850469059"
-                    Point2="260.507390884596,-16.8351850469059"
-                    Point3="260.507390884596,-20.8351850469059" />
+                    Point1="242.965724957813,-42.2935182032053"
+                    Point2="246.965724957813,-42.2935182032053"
+                    Point3="246.965724957813,-46.2935182032053" />
                   <mssgle:LineSegment
-                    End="260.507390884596,-26.1703700938118" />
+                    End="246.965724957813,-77.0870364064105" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14522,18 +14522,30 @@ FROM Stock</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="426.666652096643,166.833332317836">
+          TopLeft="187.083331853565,111.110605432598">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="103.333318945435,0"
+              EndConnector="103.333318945435,-33.1439391245187"
               Start="0,0"
-              End="95.8333189454351,0">
+              End="95.8333189454348,-33.1439391245187">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="95.8333189454351,0" />
+                    End="55.7036953906957,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="55.7036953906957,0"
+                    Point2="59.7036953906957,0"
+                    Point3="59.7036953906957,-4" />
+                  <mssgle:LineSegment
+                    End="59.7036953906957,-29.1439391245187" />
+                  <mssgle:CubicBezierSegment
+                    Point1="59.7036953906957,-29.1439391245187"
+                    Point2="59.7036953906957,-33.1439391245187"
+                    Point3="63.7036953906957,-33.1439391245187" />
+                  <mssgle:LineSegment
+                    End="95.8333189454348,-33.1439391245187" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14544,18 +14556,30 @@ FROM Stock</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 10]"
-          TopLeft="704.016638778731,476.466663713588">
+          TopLeft="437.349986682088,343.633331088391">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="37.6499873650577,0"
+              EndConnector="53.5590774049136,-60.9090900543961"
               Start="0,0"
-              End="30.1499873650577,0">
+              End="46.0590774049136,-60.9090900543961">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="30.1499873650577,0" />
+                    End="22.7795387024568,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.7795387024568,0"
+                    Point2="26.7795387024568,0"
+                    Point3="26.7795387024568,-4" />
+                  <mssgle:LineSegment
+                    End="26.7795387024568,-56.9090900543961" />
+                  <mssgle:CubicBezierSegment
+                    Point1="26.7795387024568,-56.9090900543961"
+                    Point2="26.7795387024568,-60.9090900543961"
+                    Point3="30.7795387024568,-60.9090900543961" />
+                  <mssgle:LineSegment
+                    End="46.0590774049136,-60.9090900543961" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14566,206 +14590,18 @@ FROM Stock</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 11]"
-          TopLeft="824.299959704778,497.933330591189">
+          TopLeft="579.224215519369,303.524241033995">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,38.0666670584017"
+              EndConnector="0,24.6727277576013"
               Start="0,0"
-              End="0,30.5666670584017">
+              End="0,17.1727277576013">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.5666670584017" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="363.948132677616,111.029629146825">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="235.251838364462,38.0370364832511"
-              Start="0,0"
-              End="235.251838364462,30.5370364832511">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.0185182416255" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,15.0185182416255"
-                    Point2="0,19.0185182416255"
-                    Point3="4,19.0185182416255" />
-                  <mssgle:LineSegment
-                    End="231.251838364462,19.0185182416255" />
-                  <mssgle:CubicBezierSegment
-                    Point1="231.251838364462,19.0185182416255"
-                    Point2="235.251838364462,19.0185182416255"
-                    Point3="235.251838364462,23.0185182416255" />
-                  <mssgle:LineSegment
-                    End="235.251838364462,30.5370364832511" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="668.399971042078,169.818517482263">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="73.8222106269118,0"
-              Start="0,0"
-              End="66.3222106269118,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="66.3222106269118,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="682.333309383857,286.866664816472">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="36.2999875699487,0"
-              Start="0,0"
-              End="28.7999875699487,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="28.7999875699487,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="824.227739311398,190.570369334449">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,74.6296288213827"
-              Start="0,0"
-              End="0,67.1296288213827">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,67.1296288213827" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="824.866628329292,306.799998155832">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,51.7833326839572"
-              Start="0,0"
-              End="0,44.2833326839572">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.2833326839572" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 7]"
-          TopLeft="402.274985145406,388.466664210789">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="112.308320072335,0"
-              Start="0,0"
-              End="104.808320072335,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="104.808320072335,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 8]"
-          TopLeft="737.499959704778,383.04999758179">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-38.1166544870376,0"
-              Start="0,0"
-              End="-30.6166544870376,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-30.6166544870376,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 9]"
-          TopLeft="607.099971998236,407.51666432379">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,47.4833325121965"
-              Start="0,0"
-              End="0,39.9833325121965">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,39.9833325121965" />
+                    End="0,17.1727277576013" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14776,18 +14612,18 @@ FROM Stock</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 12]"
-          TopLeft="337.883782651444,265.937035723888">
+          TopLeft="113.925461554654,219.353702714489">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,103.479628373901"
+              EndConnector="0,39.5629621517029"
               Start="0,0"
-              End="0,95.9796283739009">
+              End="0,32.0629621517029">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,95.9796283739009" />
+                    End="0,32.0629621517029" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14798,18 +14634,218 @@ FROM Stock</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 13]"
-          TopLeft="405.851837544898,472.285182045614">
+          TopLeft="189.185182716376,344.993516264118">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="104.564801233833,0"
+              EndConnector="54.5648039657123,0"
               Start="0,0"
-              End="97.064801233833,0">
+              End="47.0648039657123,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="97.064801233833,0" />
+                    End="47.0648039657123,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="187.172389175177,66.7292084153522">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="103.244261623824,0"
+              Start="0,0"
+              End="95.7442616238236,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="95.7442616238236,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="428.816650799,68.5268515199654">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="43.6138789440893,0"
+              Start="0,0"
+              End="36.1138789440893,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="36.1138789440893,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="404.208324579937,172.899998942315">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="49.8416534967316,-33.1499997694792"
+              Start="0,0"
+              End="42.3416534967316,-33.1499997694792">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="20.9208267483658,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="20.9208267483658,0"
+                    Point2="24.9208267483658,0"
+                    Point3="24.9208267483658,-4" />
+                  <mssgle:LineSegment
+                    End="24.9208267483658,-29.1499997694792" />
+                  <mssgle:CubicBezierSegment
+                    Point1="24.9208267483658,-29.1499997694792"
+                    Point2="24.9208267483658,-33.1499997694792"
+                    Point3="28.9208267483658,-33.1499997694792" />
+                  <mssgle:LineSegment
+                    End="42.3416534967316,-33.1499997694792" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="557.040253909879,85.487036731852">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33.4629624409842"
+              Start="0,0"
+              End="0,25.9629624409842">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.9629624409842" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="560.80414275703,160.549999172836">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,25.7833328647588"
+              Start="0,0"
+              End="0,18.2833328647588">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.2833328647588" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="180.399997268121,279.591664967893">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="62.3083228042145,0"
+              Start="0,0"
+              End="54.8083228042145,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="54.8083228042145,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 8]"
+          TopLeft="562.358307437392,227.933332037595">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-227.249987365057,30.733333031998"
+              Start="0,0"
+              End="-227.249987365057,23.233333031998">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.366666515999" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.366666515999"
+                    Point2="0,15.366666515999"
+                    Point3="-4,15.366666515999" />
+                  <mssgle:LineSegment
+                    End="-223.249987365057,15.366666515999" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-223.249987365057,15.366666515999"
+                    Point2="-227.249987365057,15.366666515999"
+                    Point3="-227.249987365057,19.366666515999" />
+                  <mssgle:LineSegment
+                    End="-227.249987365057,23.233333031998" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 9]"
+          TopLeft="337.829153377212,300.266665069593">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,22.5666660187977"
+              Start="0,0"
+              End="0,15.0666660187977">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.0666660187977" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14822,44 +14858,44 @@ FROM Stock</property>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Load dCostumers">
+    design-time-name="Package\Load dCustomers">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="156,41.6"
-          Id="Package\Load dCostumers\Data Conversion 1"
+          Id="Package\Load dCustomers\Data Conversion 1"
           TopLeft="696.833302054969,233.733330634303" />
         <NodeLayout
           Size="171.2,41.6"
-          Id="Package\Load dCostumers\OLE DB Destination"
+          Id="Package\Load dCustomers\OLE DB Destination"
           TopLeft="721.4999843811,0.733332509662965" />
         <NodeLayout
           Size="152.8,41.6"
-          Id="Package\Load dCostumers\Derived Column"
+          Id="Package\Load dCustomers\Derived Column"
           TopLeft="256.299987569949,84.9333327427175" />
         <NodeLayout
           Size="152,41.6"
-          Id="Package\Load dCostumers\OLE DB Source"
+          Id="Package\Load dCustomers\OLE DB Source"
           TopLeft="69.3333363400559,90.7333318917624" />
         <NodeLayout
           Size="161.6,41.6"
-          Id="Package\Load dCostumers\Derived Column 1"
+          Id="Package\Load dCustomers\Derived Column 1"
           TopLeft="491.299974730115,231.399998390873" />
         <NodeLayout
           Size="196,41.6"
-          Id="Package\Load dCostumers\OLE DB Destination error"
+          Id="Package\Load dCustomers\OLE DB Destination error"
           TopLeft="681.999977320433,327.133329278297" />
         <NodeLayout
           Size="120,41.6"
-          Id="Package\Load dCostumers\Union All"
+          Id="Package\Load dCustomers\Union All"
           TopLeft="717.333295451272,98.733332869278" />
         <NodeLayout
           Size="156,41.6"
-          Id="Package\Load dCostumers\Data Conversion"
+          Id="Package\Load dCustomers\Data Conversion"
           TopLeft="447.666657744183,80.9333319758045" />
         <EdgeLayout
-          Id="Package\Load dCostumers.Paths[Data Conversion Output]"
+          Id="Package\Load dCustomers.Paths[Data Conversion Output]"
           TopLeft="603.666657744183,101.733331975804">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -14895,7 +14931,7 @@ FROM Stock</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load dCostumers.Paths[Data Conversion Error Output1]"
+          Id="Package\Load dCustomers.Paths[Data Conversion Error Output1]"
           TopLeft="777.416639687701,275.333330634303">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -14919,7 +14955,7 @@ FROM Stock</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load dCostumers.Paths[Data Conversion Error Output]"
+          Id="Package\Load dCustomers.Paths[Data Conversion Error Output]"
           TopLeft="525.666657744183,122.533331975804">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -14955,7 +14991,7 @@ FROM Stock</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load dCostumers.Paths[Union All Output 1]"
+          Id="Package\Load dCustomers.Paths[Union All Output 1]"
           TopLeft="777.333295451272,98.733332869278">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -14991,7 +15027,7 @@ FROM Stock</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load dCostumers.Paths[OLE DB Source Output]"
+          Id="Package\Load dCustomers.Paths[OLE DB Source Output]"
           TopLeft="221.333336340056,108.63333231724">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -15015,7 +15051,7 @@ FROM Stock</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load dCostumers.Paths[Derived Column Output1]"
+          Id="Package\Load dCustomers.Paths[Derived Column Output1]"
           TopLeft="409.099987569949,103.733332359261">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -15039,7 +15075,7 @@ FROM Stock</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load dCostumers.Paths[Derived Column Output]"
+          Id="Package\Load dCustomers.Paths[Derived Column Output]"
           TopLeft="652.899974730115,253.366664512588">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -15063,7 +15099,7 @@ FROM Stock</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load dCostumers.Paths[Data Conversion Output1]"
+          Id="Package\Load dCustomers.Paths[Data Conversion Output1]"
           TopLeft="776.083298753121,233.733330634303">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -15090,7 +15126,7 @@ FROM Stock</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load dCostumers\OLE DB Destination">
+    design-time-name="Package\Load dCustomers\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -15103,7 +15139,7 @@ FROM Stock</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load dCostumers\OLE DB Source">
+    design-time-name="Package\Load dCustomers\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -15111,7 +15147,7 @@ FROM Stock</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load dCostumers\OLE DB Destination error">
+    design-time-name="Package\Load dCustomers\OLE DB Destination error">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
